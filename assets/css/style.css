@@ -1,9 +1,14 @@
- 
-body {
+ body {
     background-color: rgb(194, 173, 173);
     font-family: 'Honk', "Raleway", sans-serif;
     font-size: 40px;
     text-align: center;
+}
+
+.play {
+    width: 70%;
+    height: fit-content;
+    margin: 20%;
 }
 
 #board {
@@ -15,10 +20,11 @@ padding: 20px;
 display: inline-block;
 }
 
-.button-container {
-       margin: 10px; /* Utrymme runt hela .button-container */
+ 
+.button-container button {
+    /* Använd margin eller padding för att skapa utrymme mellan knapparna */
+    margin-bottom: 10px; /* Utrymme under varje knapp */
   }
-
 button {
     font-family: 'Honk', "Raleway", sans-serif;
     font-size: 3rem;
@@ -29,16 +35,44 @@ button {
     margin: 30%;;
 }
 
-.dice {
-    height: 10%;
-    width: 10%;
+#message {
+    margin: 40% 50% 0 50%;
+}
+
+#dice {
+    height: 80px;
+    width: 80px;
     border: 2px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 3rem;
-    margin: 75% 10% 10% 50%;
+    margin: 10% 40% 10% 40%;
+    transition: transform 0.5s ease;
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+    font-family:sans-serif;
   }
+
+  /* animation to the dice for rotation */
+@keyframes roll {
+    0% { transform: rotateY(0deg); }
+    50% { transform: rotateY(360deg); }
+    100% { transform: rotateY(0deg); }
+  }
+  
+  .dotted-number {
+    font-size: 24px;
+  }
+
+  #roll {
+    width: 5%; /* Justera storleken på prickarna efter behov */
+    height: 5%; /* Justera storleken på prickarna efter behov */
+    background-color: black; /* Ange önskad färg för prickarna */
+    border-radius: 50%; /* Gör prickarna runda */
+  }
+
 /* Heading logo */
 header {
     text-align: left;
