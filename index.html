@@ -19,41 +19,51 @@
     <title>Document</title>
 </head>
 
-
+<body>
     <!--Header-->
     <header>
       <nav> 
         <a href="index.html">
        
               <!-- navigation-->
-        <h1> <a href="firstpage.html" class="heading">2048</h1>
-        <div> <a href= "firstpage.html"> Back to menu</div>
-            </a>
+              <div> <a href= "firstpage.html"> Back to menu</div>  </a>
+        <h1><a href="firstpage.html" class="heading">Are you a dice player?</h1>
+               
           </nav>  
     </header>
-          
-      
-    
-    
-
-<body>
+         
+    <section class="gamearea">
    
-      <h2 class="scorelabel">Score <br><span id="score">0</span></h2>
+  <div> 
     
       <button class="play" id="play">Play again</button>
-    
-          
-      <!--house new tiles from js to Playground-->
-      <div id="gamearea"></div>
-     
-    
+    </div>
+    </section>
+    <p> Choose 3 numers</p>
+    <div id="board" class="button-container">
+<button aria-label="1" data-choice="0" class="control">1</button>
+<button aria-label="2" data-choice="1" class="control">2</button>
+<button aria-label="3" data-choice="2" class="control">3</button>
+<button aria-label="4" data-choice="3" class="control">4</button>
+<button aria-label="5" data-choice="4" class="control">5</button>
+<button aria-label="6" data-choice="5" class="control">6</button>
+</div>
+</section>
+<div id="message"></div>
+<div class="player">
+  <img id="numbersimage" src="" alt="numbers">
+</div>
 
-    <!-- ShowBest score board -->
-      <div class="best-score"></div>
-      
+<div class="dice" id="dice>
+ <span id="dice-value"></span>
+  <img id="computer" src="" alt="dice">
+</div>
 
-   
-    
+
+<footer>
+
+</footer>
+
    <script src="assets/js/script.js"></script>
 </body>
 </html>
