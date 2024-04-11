@@ -1,10 +1,13 @@
-const myPlayBtn = document.getElementById("message");
-const playElement = document.getElementById("play");
+const myPlayBtn = document.getElementById("play");
+myPlayBtn.addEventListener('click', function() {
+});
+
+const playElement = document.getElementById("message");
  
          // This is variables
       const buttons = document.getElementsByClassName("control");
       const playerScore = document.getElementById("player-score");
-      //const dice = document.getElementsByclassName("dice");
+      const dice = document.querySelector("dice-dot");
       //const dicedot = document.getElementsByclassName("dicedot");
       const choice = ["1", "2", "3", "4", "5", "6"]; // players choice of number
      // const numberOfRolls = 6
@@ -70,28 +73,27 @@ const playElement = document.getElementById("play");
 
 
      // roll Dice and get computers number
-      function rollDice() {
-         const numberOfRolls = dice.querySelectorAll("span").length;
-        const randomNumber = Math.floor(Math.random() * numberOfRolls) + 1;
-      console.log ("dice number");
+     function rollDice() {
+      const diceContainer = document.querySelector('.dice-dot');
+      const diceSpans = diceContainer.querySelectorAll('span');
+      const numberOfRolls = diceSpans.length;
+      const randomNumber = Math.floor(Math.random() * numberOfRolls) + 1;
 
      //change random number to dots
-        for (let i = 0; i < randomNumber; i++) {
-        const dot = document.createElement("span");
-          dot.classList.add("dice");
-        dice.appendChild(dot);
-              
-        }
+     for (let i = 0; i < randomNumber; i++) {
+      diceSpans[i].classList.add('dice');
 
-        // update dice with the number                 
-      // dice.textContent = dicepatterns(randomNumber);
-       console.log("convert numbers to dots");
-       
+   
+     }
+     console.log("roll dice");
+
        message.textContent = "dice rolled: ";
-      }
+    }
+    
+    console.log("convert numbers to dots");
+       
       
-      
-   console.log("roll dice");
+   
 
    /* tror inte jag behöver denna
          setTimeout(function() {
