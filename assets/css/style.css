@@ -28,6 +28,7 @@ background: url(../image/background.png) ;
 background-size: 100%;
 padding: 20px; 
 display: inline-block;
+border-radius: 10%;
 }
 
   /* buttons placement in #board*/
@@ -67,6 +68,7 @@ button {
     background-color: white;
     border-radius: 10px;
     font-family:sans-serif;
+    position: fixed;
   }
   
   /*dots on dice*/
@@ -81,7 +83,7 @@ button {
     position: absolute;
     top: var(--top);
     left:var(--left);
-    transform: translateX(calc(var(--left) * -1)) translateY(calc(var(--top) * -1)) ;
+ /*  transform: translateX(calc(var(--left) * -1)) translateY(calc(var(--top) * -1)) ;*/
 
   }
   

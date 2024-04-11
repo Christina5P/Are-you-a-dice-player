@@ -1,33 +1,50 @@
-const myPlayBtn = document.getElementById("play");
-myPlayBtn.addEventListener('click', function() {
-});
 
 const playElement = document.getElementById("message");
- 
-         // This is variables
-     
+let choicecounter = 0;
+         
+         const myPlayBtn = document.getElementById("play");
+         myPlayBtn.addEventListener('click', function() {
+          message.textContent = "Roll dice:";
+          choicecounter = 0;
+          buttons.forEach(button=>{
+          button.style.backgroundColor="#000000";
+})
+
+         });
+              
      
       const playerScore = document.getElementById("player-score");
       const choice = ["1", "2", "3", "4", "5", "6"]; // players choice of number
           
       const buttons = document.querySelectorAll(".control");
-      const board = document.getElementById("board");
+     
+buttons.forEach(button=>{
+  button.addEventListener("click", changeBoardColor);
+})
+
+
+
+function changeBoardColor(event) {
+if (choicecounter < 3) {
+    console.log("click knapp");
+    console.log(event.target.value);
+     event.target.style.backgroundColor="#FFFFFF";
+     //   board.style.transition = ".5s ease";
+    choicecounter++;      
+    }
+}
       
-      function changeBoardColor() {
-          board.style.backgroundColor = "white";
-          board.style.transition = ".5s ease";
-      }
       
-      buttons.forEach(button => {
-          button.addEventListener("click", changeBoardColor);
-      });
-         function playerchoice() { 
+/*
+       function playerchoice() { 
         choice= [i];
         for (i=0;i<els.length;i++) {
         if(els[i].type=='checkbox')
         els[i].checked=!els[i].checked;
+        buttons.style.backgroundColor="#FFFFFF";
+          board.style.transition = ".5s ease";
         }
-        }
+        } */
 
      
     
@@ -76,53 +93,59 @@ const playElement = document.getElementById("message");
       for (const dotPosition of dotPositionMatrix[number]) {
         const dot = document.createElement("span");
 
-        dot.classList.add("dice-container");
+       // dot.classList.add("dice-container");
+        dot.classList.add("dice-dot");
         dot.style.setProperty("--top", dotPosition[0] + "%");
         dot.style.setProperty("--left", dotPosition[1] + "%");
         dice.appendChild(dot);
       }
       return dice;
     }
-     // roll Dice with dots from dice-dot
+      const diceContainer = document.getElementById("dice-container");
+     diceContainer.innerHTML = ""; // rensa innehåller
+     const dice = createDice(6);
+      diceContainer.appendChild(dice);
 
+     // roll Dice with dots 
      function rollDice() {
+      if(message.textContent=="Roll dice:") { 
       const diceContainer = document.getElementById('dice-container');
       const diceSpans = diceContainer.querySelectorAll('span');
-  
-      // Lägg till klassen "roll" för att starta animationssekvensen
+ 
+      // Add class "roll" to get animation
       diceSpans.forEach(span => span.classList.add("roll"));
   
-      // Efter en viss tid, ta bort klassen "roll" för att avsluta animationssekvensen
+      // quit animation
       setTimeout(() => {
           diceSpans.forEach(span => span.classList.remove("roll"));
       }, 1000);
+      const numberOfRolls = diceSpans.length;
+      console.log("numberOfRolls",numberOfRolls);
+      const randomNumber = Math.floor(Math.random() * numberOfRolls) + 1;
+      
+      console.log(randomNumber);
+      //const diceContainer = document.getElementById("dice-container");
+      diceContainer.innerHTML = ""; // rensa innehållet
+      const dice = createDice(randomNumber);
+       diceContainer.appendChild(dice);
+ 
       message.textContent = "dice rolled: ";
-  }
-
+  } }
+  
+/* add this text after the score adds:
+const message = document.getElementById("message");
+message.textContent = ""; // Rensar textinnehållet
   /*  
      
-      const numberOfRolls = diceSpans.length;
-      const randomNumber = Math.floor(Math.random() * numberOfRolls) + 1;
+     
 
+      /* do I need this?
+      
      //change random number to dots
      for (let i = 0; i < randomNumber; i++) {
       diceSpans[i].classList.add('dice');
   
      } 
-     /* This is an alternative to spans
-      const diceContainer = document.getElementById("dice-container");
-     diceContainer.innerHTML = ""; // rensa innehåller
-     const dice = createDice(6);
-      diceContainer.appendChild(dice); */
-     console.log("roll dice");
-
-     
-    
-    
-    console.log("message rolled ok");
-       
-      
-   
 
    /* tror inte jag behöver denna
          setTimeout(function() {
@@ -130,15 +153,5 @@ const playElement = document.getElementById("message");
           dice.style.transition = 'none'; 
           dice.style.transform = 'rotateY(0deg)';
         }, 500); 
-      } 
-    
-      const dicePatterns = [
-        "",
-         "*",
-         "* *",
-         "*   *",
-         "* * *",
-         "* *   *"
-      ];  
-      //convert numbers to dots  
-      dice.textContent = dicePatterns [randomNumber]; */
+      } */
+   
