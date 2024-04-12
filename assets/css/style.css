@@ -18,13 +18,18 @@ a{
 h1{
     font-size: 2em;
     text-align: center;
+    background-color: rgb(139, 127, 127);
+    padding-block: 5%;
+    width: 100%;
+    height:auto;
+    ;
 }
 p {
     font-size: 1em;;
 }
 
 footer {
-    margin-top: 40%;
+    margin-top: 35%;
     }
 
 /* button for play*/

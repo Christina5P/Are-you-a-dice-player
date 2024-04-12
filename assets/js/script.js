@@ -14,18 +14,17 @@ let choicecounter = 0;
               
   // Players choice of number 
   const playerScore = document.getElementById("player-score");
-  const choice = ["1", "2", "3", "4", "5", "6"]; // players choice of number
-          
+  const choice = ["1", "2", "3", "4", "5", "6"]; // players choice of number    
   const buttons = document.querySelectorAll(".control");
-     
+    
   buttons.forEach(button=>{
   button.addEventListener("click", changeBoardColor);
-})
+});
 
 // change colour of picked cards with number - 3 cards
 function changeBoardColor(event) {
 if (choicecounter < 3) {
-    console.log("click knapp");
+    console.log("click button");
     console.log(event.target.value);
      event.target.style.backgroundColor="#FFFFFF";
      //   board.style.transition = ".5s ease";
@@ -84,7 +83,7 @@ if (choicecounter < 3) {
       return dice;
     }
 
-         const diceContainer = document.getElementById("dice-container");
+     const diceContainer = document.getElementById("dice-container");
      diceContainer.innerHTML = ""; // clear dots to new roll
      const dice = createDice(6);
       diceContainer.appendChild(dice);
@@ -113,45 +112,34 @@ if (choicecounter < 3) {
        diceContainer.appendChild(dice);
  
       message.textContent = "dice rolled: ";
+
   } }
-  
-/* add this text after the score adds:
-const message = document.getElementById("message");
-message.textContent = ""; // Rensar textinnehållet
-  /*  
-     
-     
 
-      /* do I need this?
-      
-     //change random number to dots
-     for (let i = 0; i < randomNumber; i++) {
-      diceSpans[i].classList.add('dice');
-  
-     } 
 
-   /* tror inte jag behöver denna
-         setTimeout(function() {
-          diceValue.textContent = randomNumber;
-          dice.style.transition = 'none'; 
-          dice.style.transform = 'rotateY(0deg)';
-        }, 500); 
-      } */
+  choicecounter = 0;
+ 
+  function changeBoardColor(event) {
+    let playerchoice = [];
 
-          
-/*
-       function playerchoice() { 
-        choice= [i];
-        for (i=0;i<els.length;i++) {
-        if(els[i].type=='checkbox')
-        els[i].checked=!els[i].checked;
-        buttons.style.backgroundColor="#FFFFFF";
-          board.style.transition = ".5s ease";
+    if (choicecounter < 3) {
+        console.log("click button");
+        console.log(event.target.value);
+         event.target.style.backgroundColor="#FFFFFF";
+         playerchoice.push(event.target.value);
+         choicecounter++;      
         }
-        } */
+    }
+          console.log("playerchoice");
+          
+        
+  function checkAnswer (playerchoice) {
+    const correctNumber = rollDice();
 
-     
-    
-      
-
-   
+    if (playerchoice===correctNumber) {
+            alert("You won");
+      } else{ 
+            alert("You lost");
+    }
+  }
+    console.log("checkAnswer");
+            
