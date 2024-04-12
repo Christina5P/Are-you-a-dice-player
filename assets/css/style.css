@@ -12,6 +12,20 @@ header {
     font-size: 1rem;
     margin-top: 0%;
 }
+a{
+    font-size: 1.5em;
+}
+h1{
+    font-size: 2em;
+    text-align: center;
+}
+p {
+    font-size: 1em;;
+}
+
+footer {
+    margin-top: 40%;
+    }
 
 /* button for play*/
 .play {
@@ -62,13 +76,13 @@ button {
     justify-content: center;
     align-items: center;
     font-size: 3rem;
-    margin: 10% 40% 10% 40%;
+    margin: 0 40%;
     transition: transform 0.5s ease;
     color: black;
     background-color: white;
     border-radius: 10px;
     font-family:sans-serif;
-    position: fixed;
+    position: absolute;
   }
   
   /*dots on dice*/

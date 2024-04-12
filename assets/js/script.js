@@ -2,28 +2,27 @@
 const playElement = document.getElementById("message");
 let choicecounter = 0;
          
-         const myPlayBtn = document.getElementById("play");
-         myPlayBtn.addEventListener('click', function() {
-          message.textContent = "Roll dice:";
-          choicecounter = 0;
-          buttons.forEach(button=>{
-          button.style.backgroundColor="#000000";
+   // To roll the dice just once time 
+   const myPlayBtn = document.getElementById("play");
+   myPlayBtn.addEventListener('click', function() {
+   message.textContent = "Roll dice:";
+   choicecounter = 0;
+   buttons.forEach(button=>{
+  button.style.backgroundColor="#000000";
 })
-
-         });
+  });
               
-     
-      const playerScore = document.getElementById("player-score");
-      const choice = ["1", "2", "3", "4", "5", "6"]; // players choice of number
+  // Players choice of number 
+  const playerScore = document.getElementById("player-score");
+  const choice = ["1", "2", "3", "4", "5", "6"]; // players choice of number
           
-      const buttons = document.querySelectorAll(".control");
+  const buttons = document.querySelectorAll(".control");
      
-buttons.forEach(button=>{
+  buttons.forEach(button=>{
   button.addEventListener("click", changeBoardColor);
 })
 
-
-
+// change colour of picked cards with number - 3 cards
 function changeBoardColor(event) {
 if (choicecounter < 3) {
     console.log("click knapp");
@@ -33,24 +32,7 @@ if (choicecounter < 3) {
     choicecounter++;      
     }
 }
-      
-      
-/*
-       function playerchoice() { 
-        choice= [i];
-        for (i=0;i<els.length;i++) {
-        if(els[i].type=='checkbox')
-        els[i].checked=!els[i].checked;
-        buttons.style.backgroundColor="#FFFFFF";
-          board.style.transition = ".5s ease";
-        }
-        } */
-
-     
-    
-      
-
-     //create the dice
+            //create the dice
     function createDice(number){     
     const dotPositionMatrix = {
       1: [
@@ -93,7 +75,7 @@ if (choicecounter < 3) {
       for (const dotPosition of dotPositionMatrix[number]) {
         const dot = document.createElement("span");
 
-       // dot.classList.add("dice-container");
+       // create the dots on dice 
         dot.classList.add("dice-dot");
         dot.style.setProperty("--top", dotPosition[0] + "%");
         dot.style.setProperty("--left", dotPosition[1] + "%");
@@ -101,8 +83,9 @@ if (choicecounter < 3) {
       }
       return dice;
     }
-      const diceContainer = document.getElementById("dice-container");
-     diceContainer.innerHTML = ""; // rensa innehåller
+
+         const diceContainer = document.getElementById("dice-container");
+     diceContainer.innerHTML = ""; // clear dots to new roll
      const dice = createDice(6);
       diceContainer.appendChild(dice);
 
@@ -124,8 +107,8 @@ if (choicecounter < 3) {
       const randomNumber = Math.floor(Math.random() * numberOfRolls) + 1;
       
       console.log(randomNumber);
-      //const diceContainer = document.getElementById("dice-container");
-      diceContainer.innerHTML = ""; // rensa innehållet
+
+            diceContainer.innerHTML = ""; // clear dots to new roll
       const dice = createDice(randomNumber);
        diceContainer.appendChild(dice);
  
@@ -154,4 +137,21 @@ message.textContent = ""; // Rensar textinnehållet
           dice.style.transform = 'rotateY(0deg)';
         }, 500); 
       } */
+
+          
+/*
+       function playerchoice() { 
+        choice= [i];
+        for (i=0;i<els.length;i++) {
+        if(els[i].type=='checkbox')
+        els[i].checked=!els[i].checked;
+        buttons.style.backgroundColor="#FFFFFF";
+          board.style.transition = ".5s ease";
+        }
+        } */
+
+     
+    
+      
+
    
