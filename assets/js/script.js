@@ -136,12 +136,14 @@ const messageElement = document.getElementById("result");
 
 function checkAnswer(correctNumber) {
    console.log("correctnumber", correctNumber);
+   console.log(playerChoices);
  
  if (playerChoices.includes(correctNumber.toString()))  {
  
   messageElement.textContent = "You won";
   }  else {
   messageElement.textContent = "You lost";
+  console.log(messageElement);
 }
 }
 

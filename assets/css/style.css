@@ -152,5 +152,10 @@ button {
         left: 50%;
     }
  
-
+#result {
+    margin-top: auto;
+    width: auto;
+    height: auto;
+    
+}
 
