@@ -37,3 +37,6 @@ Troubleshot url-problems
 
 - https://www.youtube.com/watch?v=Fw3jE0tWn28 
  Tutoting change colour on buttons
+
+ - https://www.w3schools.com/jsref/met_document_getelementsbyclassname.asp
+ 
