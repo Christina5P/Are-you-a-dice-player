@@ -100,27 +100,28 @@ function rollDice() {
     // quit animation
     setTimeout(() => {
       diceSpans.forEach(span => span.classList.remove("roll"));
-    }, 2000);
-    const numberOfRolls = diceSpans.length;
-    console.log("numberOfRolls", numberOfRolls);
-    const randomNumber = Math.floor(Math.random() * numberOfRolls) + 1;
+      const correctNumber = rollDiceInternal(); // Anropa rollDiceInternal() och lagra resultatet i correctNumber
+      checkAnswer(correctNumber);
+    }, 1000);
+  }
+}
 
-    console.log(randomNumber);
+//help with this function from perplexity
+function rollDiceInternal() {
+  const diceContainer = document.getElementById('dice-container');
+  const diceSpans = diceContainer.querySelectorAll('span');
+  const numberOfRolls = diceSpans.length;
+  const randomNumber = Math.floor(Math.random() * numberOfRolls) + 1;
 
-    diceContainer.innerHTML = ""; // clear dots to new roll
-    const dice = createDice(randomNumber);
-    diceContainer.appendChild(dice);
+
+  diceContainer.innerHTML = ""; // clear dots to new roll
+  const dice = createDice(randomNumber);
+  diceContainer.appendChild(dice);
 
      message.textContent = "dice rolled: ";
-     
-   checkAnswer();
- 
+     return randomNumber;
 }
-}
-const messageElement = document.getElementById("result");
-
-const playerChoices = [];
-
+     const playerChoices = [];
 function changeBoardColor(event) {
   if (choicecounter < 3) {
         event.target.style.backgroundColor = "#FFFFFF";
@@ -131,13 +132,13 @@ function changeBoardColor(event) {
       }  console.log(playerChoices);
 }
 
-function checkAnswer() {
-  const correctNumber = rollDice();
- 
-  console.log("correctnumber", correctNumber);
+const messageElement = document.getElementById("result");
+
+function checkAnswer(correctNumber) {
+   console.log("correctnumber", correctNumber);
  
  if (playerChoices.includes(correctNumber.toString()))  {
-
+ 
   messageElement.textContent = "You won";
   }  else {
   messageElement.textContent = "You lost";
@@ -145,7 +146,11 @@ function checkAnswer() {
 }
 
 
+/*
 
+
+const playerChoices = [];
+*/
 
 
 
