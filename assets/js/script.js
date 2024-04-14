@@ -114,8 +114,8 @@ function rollDice() {
      message.textContent = "dice rolled: ";
      
    checkAnswer();
-   return randomNumber;
-  }
+ 
+}
 }
 const messageElement = document.getElementById("result");
 
@@ -123,25 +123,23 @@ const playerChoices = [];
 
 function changeBoardColor(event) {
   if (choicecounter < 3) {
-    
-    event.target.style.backgroundColor = "#FFFFFF";
+        event.target.style.backgroundColor = "#FFFFFF";
     //   board.style.transition = ".5s ease";
       playerChoices.push(event.target.value);
       choicecounter++;
     
-  }
+      }  console.log(playerChoices);
 }
-console.log(playerChoices);
 
 function checkAnswer() {
   const correctNumber = rollDice();
-
- if (playerChoices === correctNumber) { 
- // if (playerChoices.includes(correctNumber.toString())) { 
+ 
+  console.log("correctnumber", correctNumber);
+ 
+ if (playerChoices.includes(correctNumber.toString()))  {
 
   messageElement.textContent = "You won";
-  }
-  else {
+  }  else {
   messageElement.textContent = "You lost";
 }
 }
