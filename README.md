@@ -35,8 +35,16 @@ Troubleshot url-problems
 
 - Tutoring lesson with Ernst, Digitala lyftet
 
+- CI Tutor to help to me understand function "checkAnswer"
+
 - https://www.youtube.com/watch?v=Fw3jE0tWn28 
  Tutoting change colour on buttons
 
  - https://www.w3schools.com/jsref/met_document_getelementsbyclassname.asp
+ To teach how to call back information
+
+
+ - https://www.geeksforgeeks.org/javascript-nested-functions/
+ - https://www.tutorialspoint.com/javascript/javascript_nested_functions.htm 
+ To tech me about nested functions
  

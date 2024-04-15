@@ -102,7 +102,7 @@ function rollDice() {
       diceSpans.forEach(span => span.classList.remove("roll"));
       const correctNumber = rollDiceInternal(); // Anropa rollDiceInternal() och lagra resultatet i correctNumber
       checkAnswer(correctNumber);
-    }, 1000);
+    },500);
   }
 }
 
@@ -133,6 +133,15 @@ function changeBoardColor(event) {
 }
 
 const messageElement = document.getElementById("result");
+const winnervideo = document.createElement("video");
+const loservideo = document.createElement("video");
+
+winnervideo.src = "https://christina5p.github.io/Are-you-a-dice-player/assets/image/win.mp4";
+winnervideo.alt = "winner";
+winnervideo.type = "video/mp4";
+loservideo.src ="https://christina5p.github.io/Are-you-a-dice-player/assets/image/lose.mp4";
+loservideo.alt = "loser";
+loservideo.type = "video/mp4";
 
 function checkAnswer(correctNumber) {
    console.log("correctnumber", correctNumber);
@@ -141,18 +150,14 @@ function checkAnswer(correctNumber) {
  if (playerChoices.includes(correctNumber.toString()))  {
  
   messageElement.textContent = "You won";
+  messageElement.appendChild(winnervideo);
   }  else {
   messageElement.textContent = "You lost";
+  messageElement.appendChild(loservideo);
   console.log(messageElement);
 }
 }
 
-
-/*
-
-
-const playerChoices = [];
-*/
 
 
 
