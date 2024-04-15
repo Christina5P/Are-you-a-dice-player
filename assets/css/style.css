@@ -154,8 +154,17 @@ button {
  
 #result {
     margin-top: 40%;
+    margin-right: 12%;
     width: auto;
     height: auto;
     
+}
+video {
+    max-width: 64rem;
+    width: 70%;
+    max-height:30.875rem;
+    height: 80%;
+    margin: 1.50rem auto;
+    padding: 1.051%;  
 }
 

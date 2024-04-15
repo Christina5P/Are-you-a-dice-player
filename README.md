@@ -47,4 +47,10 @@ Troubleshot url-problems
  - https://www.geeksforgeeks.org/javascript-nested-functions/
  - https://www.tutorialspoint.com/javascript/javascript_nested_functions.htm 
  To tech me about nested functions
- 
+
+ - https://codedamn.com/news/javascript/how-to-empty-an-array-in-javascript
+ Tutoring how to clear arrays
+
+- https://developer.mozilla.org/en-US/docs/Web/API/Element/remove 
+Tutoring remove element
+
