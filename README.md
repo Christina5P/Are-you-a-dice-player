@@ -57,3 +57,5 @@ Tutoring remove element
 - https://stackoverflow.com/questions/3087975/how-to-change-the-cursor-into-a-hand-when-a-user-hovers-over-a-list-item
 To get cursor properties
 
+- https://www.w3schools.com/cssref/css3_pr_mediaquery.php
+responsive check to css

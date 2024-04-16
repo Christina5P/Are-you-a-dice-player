@@ -27,7 +27,7 @@ h1{
 }
 
 h2 {
-    font-size: 1rem;
+    font-size: 2rem;
 }
 
 .rules {
@@ -43,7 +43,7 @@ footer {
 .play {
     width: 70%;
     height: fit-content;
-    margin: 20%;
+    margin: 5%;
 }
 
 /* players board with numberchoice*/
@@ -185,3 +185,39 @@ video {
     padding: 1.051%;  
 }
 
+
+@media screen and (max-width: 768px) {
+ 
+    .play{
+        margin: 10%;
+}
+}
+
+@media screen and (min-width: 768px)  {
+  
+h2 {
+    font-size: 2.5rem;
+}
+.rules {
+    font-size: 2rem;
+    font-style: oblique;
+}
+
+.dice {
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    margin: 0 40%;
+    transition: transform 0.5s ease;
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+    font-family:sans-serif;
+    position: absolute;
+  }
+}
+ 

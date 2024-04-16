@@ -169,9 +169,7 @@ function checkAnswer(correctNumber) {
   messageElement.appendChild(winnervideo);
   winnervideo.autoplay = true
  
-  /*setTimeout(() => {   
-  },9000); // Vänta 9 sekunder innan rensning*/
-  console.log(winnervideo.autoplay);
+   console.log(winnervideo.autoplay);
 
   }   else {
   messageElement.textContent = "You lost";
