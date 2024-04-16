@@ -2,6 +2,15 @@
 const playElement = document.getElementById("message");
 let choicecounter = 0;
 
+const playAgainBtn = document.getElementById("play");
+
+playAgainBtn.addEventListener('click', function () {
+  let  choicecounter = 0;
+  playerChoices.length = 0; // empty choicers array
+  messageElement.textContent = ""; // Rensa meddelandet
+  messageElement.removeChild(winnervideo); // Ta bort vinnarvideon om den finns
+  messageElement.removeChild(loservideo); // Ta bort förlorarvideon om den finns
+});
 
 // To roll the dice just once time 
 const myPlayBtn = document.getElementById("play");
@@ -19,7 +28,7 @@ const choice = ["1", "2", "3", "4", "5", "6"]; // players choice of number
 const buttons = document.querySelectorAll(".control");
 buttons.forEach(button => {
   button.addEventListener("click", changeBoardColor);
-
+  
 });
 
 // change colour of picked cards with number - 3 cards
@@ -28,7 +37,7 @@ function changeBoardColor(event) {
     console.log("click button");
     console.log(event.target.value);
     event.target.style.backgroundColor = "#FFFFFF";
-    //   board.style.transition = ".5s ease";
+    board.style.transition = ".5s ease";
     choicecounter++;
   }
 }
@@ -135,9 +144,6 @@ function changeBoardColor(event) {
       }  console.log(playerChoices);
 }
 
-
-
-
 const messageElement = document.getElementById("result");
 const winnervideo = document.createElement("video");
 const loservideo = document.createElement("video");
@@ -156,37 +162,12 @@ function checkAnswer(correctNumber) {
  if (playerChoices.includes(correctNumber.toString()))  {
    messageElement.textContent = "You won";
   messageElement.appendChild(winnervideo);
-  setTimeout(() => {   
-  },9000); // Vänta 9 sekunder innan rensning
-  console.log(visualViewport)
+  /*setTimeout(() => {   
+  },9000); // Vänta 9 sekunder innan rensning*/
+
 
   }   else {
   messageElement.textContent = "You lost";
   messageElement.appendChild(loservideo);
- setTimeout(() => {   
-  }, 9000); // Vänta 9 sekunder innan rensning
   }
-  console.log(visualViewport);
 }
-
-/*
-console.log(visualViewport)
-playerChoices.splice(0, playerChoices.length);
-console.log(playerChoices);
-
-update.getElementById("result");
-
-
-const element = document.getElementById("result");
-while (element.childNodes);
-element.remove(); 
-element.removeChild();
-
-
-let choicecounter = 0;
-messageElement.textContent = ""; // Rensa meddelandet
-messageElement.appendChild(winnervideo); 
-messageElement.textContent = ""; // Rensa meddelandet
-messageElement.appendChild(loservideo); 
-*/
-
