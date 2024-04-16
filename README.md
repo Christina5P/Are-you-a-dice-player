@@ -54,3 +54,6 @@ Troubleshot url-problems
 - https://developer.mozilla.org/en-US/docs/Web/API/Element/remove 
 Tutoring remove element
 
+- https://stackoverflow.com/questions/3087975/how-to-change-the-cursor-into-a-hand-when-a-user-hovers-over-a-list-item
+To get cursor properties
+
