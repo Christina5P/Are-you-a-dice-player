@@ -36,7 +36,7 @@ footer {
 .play {
     width: 70%;
     height: fit-content;
-    margin: 40% 0 0;
+    margin: 20;
 }
 
 /* players board with numberchoice*/
@@ -62,11 +62,19 @@ button {
     background-color: black;
     height: 10%;
     width: 25%;
-    margin: 30%;;
+    margin: 30%;
+}
+button:hover {
+    cursor: pointer;
 }
 
 #message {
     margin: 10%;
+    border: 0.5rem solid; 
+    border-color: rgb(255, 247, 0);
+}
+#message:hover {
+    cursor: pointer;
 }
 
 #dice-container {

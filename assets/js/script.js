@@ -15,7 +15,7 @@ playAgainBtn.addEventListener('click', function () {
 // To roll the dice just once time 
 const myPlayBtn = document.getElementById("play");
 myPlayBtn.addEventListener('click', function () {
-  message.textContent = "Roll dice:";
+  message.textContent = "click here to roll dice";
   choicecounter = 0;
   buttons.forEach(button => {
     button.style.backgroundColor = "#000000";
@@ -100,7 +100,7 @@ diceContainer.appendChild(dice);
 
 // roll Dice with dots 
 function rollDice() {
-  if (message.textContent == "Roll dice:") {
+  if (message.textContent == "click here to roll dice") {
     const diceContainer = document.getElementById('dice-container');
     const diceSpans = diceContainer.querySelectorAll('span');
 
