@@ -8,8 +8,8 @@ playAgainBtn.addEventListener('click', function () {
   let  choicecounter = 0;
   playerChoices.length = 0; // empty choicers array
   messageElement.textContent = ""; // Rensa meddelandet
-  messageElement.removeChild(winnervideo); // Ta bort vinnarvideon om den finns
-  messageElement.removeChild(loservideo); // Ta bort förlorarvideon om den finns
+  //messageElement.removeChild(winnervideo); // Ta bort vinnarvideon om den finns
+  //messageElement.removeChild(loservideo); // Ta bort förlorarvideon om den finns
 });
 
 // To roll the dice just once time 
@@ -151,9 +151,14 @@ const loservideo = document.createElement("video");
 winnervideo.src = "https://christina5p.github.io/Are-you-a-dice-player/assets/image/win.mp4";
 winnervideo.alt = "winner";
 winnervideo.type = "video/mp4";
+
+
+
 loservideo.src ="https://christina5p.github.io/Are-you-a-dice-player/assets/image/lose.mp4";
 loservideo.alt = "loser";
 loservideo.type = "video/mp4";
+
+
 
 function checkAnswer(correctNumber) {
    console.log("correctnumber", correctNumber);
@@ -162,12 +167,16 @@ function checkAnswer(correctNumber) {
  if (playerChoices.includes(correctNumber.toString()))  {
    messageElement.textContent = "You won";
   messageElement.appendChild(winnervideo);
+  winnervideo.autoplay = true
+ 
   /*setTimeout(() => {   
   },9000); // Vänta 9 sekunder innan rensning*/
-
+  console.log(winnervideo.autoplay);
 
   }   else {
   messageElement.textContent = "You lost";
   messageElement.appendChild(loservideo);
+  loservideo.autoplay = true
+  console.log(loservideo.autoplay);
   }
 }

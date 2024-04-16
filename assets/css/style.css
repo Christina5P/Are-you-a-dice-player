@@ -168,10 +168,12 @@ button:hover {
     }
  
 #result {
-    margin-top: 40%;
+   
+    margin-top: 20%;
     margin-right: 12%;
     width: auto;
     height: auto;
+    display: inline-grid
     
 }
 video {
