@@ -37,6 +37,9 @@ h2 {
 
 footer {
     margin-top: 35%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: small;
+    color: aliceblue;
     }
 
 /* button for play*/
@@ -184,7 +187,6 @@ video {
     margin: 1.50rem auto;
     padding: 1.051%;  
 }
-
 
 @media screen and (max-width: 768px) {
  
