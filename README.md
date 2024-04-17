@@ -59,3 +59,6 @@ To get cursor properties
 
 - https://www.w3schools.com/cssref/css3_pr_mediaquery.php
 responsive check to css
+
+-https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
+Tutoring scroll up the window

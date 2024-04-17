@@ -1,16 +1,17 @@
 
+
+// to get to numbers and count players choice og number
 const playElement = document.getElementById("message");
 let choicecounter = 0;
 
+// button and function to restart the game  
 const playAgainBtn = document.getElementById("play");
 
 playAgainBtn.addEventListener('click', function () {
   let  choicecounter = 0;
   playerChoices.length = 0; // empty choicers array
-  messageElement.textContent = ""; // Rensa meddelandet
-  //messageElement.removeChild(winnervideo); // Ta bort vinnarvideon om den finns
-  //messageElement.removeChild(loservideo); // Ta bort förlorarvideon om den finns
-});
+  messageElement.textContent = ""; // clear message "Roll Dice"
+ });
 
 // To roll the dice just once time 
 const myPlayBtn = document.getElementById("play");
@@ -24,7 +25,7 @@ myPlayBtn.addEventListener('click', function () {
 
 // Players choice of number 
 const playerScore = document.getElementById("player-score");
-const choice = ["1", "2", "3", "4", "5", "6"]; // players choice of number    
+const choice = ["1", "2", "3", "4", "5", "6"];   
 const buttons = document.querySelectorAll(".control");
 buttons.forEach(button => {
   button.addEventListener("click", changeBoardColor);
@@ -41,6 +42,7 @@ function changeBoardColor(event) {
     choicecounter++;
   }
 }
+
 //create the dice
 function createDice(number) {
   const dotPositionMatrix = {
@@ -94,7 +96,7 @@ function createDice(number) {
 }
 
 const diceContainer = document.getElementById("dice-container");
-diceContainer.innerHTML = ""; // clear dots to new roll
+diceContainer.innerHTML = "" ; // clear dots to new roll
 const dice = createDice(6);
 diceContainer.appendChild(dice);
 
@@ -116,7 +118,7 @@ function rollDice() {
   }
 }
 
-//help with this function from perplexity
+//function to compare playerchoice and diceroll to get true or false (help with this function from perplexity)
 function rollDiceInternal() {
   const diceContainer = document.getElementById('dice-container');
   const diceSpans = diceContainer.querySelectorAll('span');
@@ -137,13 +139,13 @@ function rollDiceInternal() {
 function changeBoardColor(event) {
   if (choicecounter < 3) {
         event.target.style.backgroundColor = "#FFFFFF";
-    //   board.style.transition = ".5s ease";
-      playerChoices.push(event.target.value);
-      choicecounter++;
+        playerChoices.push(event.target.value);
+        choicecounter++;
     
       }  console.log(playerChoices);
 }
 
+// call the winner or loser video from result
 const messageElement = document.getElementById("result");
 const winnervideo = document.createElement("video");
 const loservideo = document.createElement("video");
@@ -152,14 +154,11 @@ winnervideo.src = "https://christina5p.github.io/Are-you-a-dice-player/assets/im
 winnervideo.alt = "winner";
 winnervideo.type = "video/mp4";
 
-
-
 loservideo.src ="https://christina5p.github.io/Are-you-a-dice-player/assets/image/lose.mp4";
 loservideo.alt = "loser";
 loservideo.type = "video/mp4";
 
-
-
+//function to check playerschoice and give result and video
 function checkAnswer(correctNumber) {
    console.log("correctnumber", correctNumber);
    console.log(playerChoices);
@@ -178,3 +177,16 @@ function checkAnswer(correctNumber) {
   console.log(loservideo.autoplay);
   }
 }
+
+// move back to top when clicking "playagain" button
+playAgainBtn.addEventListener("click", topFunction);
+function topFunction() {
+   document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera*/
+}
+console.log(scrollTop);
+
+
+
+ //messageElement.removeChild(winnervideo); // Ta bort vinnarvideon om den finns
+  //messageElement.removeChild(loservideo); // Ta bort förlorarvideon om den finns
