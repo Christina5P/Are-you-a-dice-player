@@ -95,16 +95,16 @@ function createDice(number) {
   return dice;
 }
 
-const diceContainer = document.getElementById("dice-container");
-diceContainer.innerHTML = "" ; // clear dots to new roll
+const diceContainer = document.getElementById("diceContainer");
+diceContainer.innerHTML = "" ;
 const dice = createDice(6);
 diceContainer.appendChild(dice);
 
 // roll Dice with dots 
 function rollDice() {
   if (message.textContent == "click here to roll dice") {
-    const diceContainer = document.getElementById('dice-container');
-    const diceSpans = diceContainer.querySelectorAll('span');
+    const diceContainer = document.getElementById("diceContainer");
+    const diceSpans = diceContainer.querySelectorAll("span");
 
     // Add class "roll" to get animation
     diceSpans.forEach(span => span.classList.add("roll"));
@@ -120,8 +120,8 @@ function rollDice() {
 
 //function to compare playerchoice and diceroll to get true or false (help with this function from perplexity)
 function rollDiceInternal() {
-  const diceContainer = document.getElementById('dice-container');
-  const diceSpans = diceContainer.querySelectorAll('span');
+  const diceContainer = document.getElementById("diceContainer");
+  const diceSpans = diceContainer.querySelectorAll("span");
   const numberOfRolls = diceSpans.length;
   const randomNumber = Math.floor(Math.random() * numberOfRolls) + 1;
 
@@ -153,10 +153,16 @@ const loservideo = document.createElement("video");
 winnervideo.src = "https://christina5p.github.io/Are-you-a-dice-player/assets/image/win.mp4";
 winnervideo.alt = "winner";
 winnervideo.type = "video/mp4";
+winnervideo.autoplay = true;
+winnervideo.loop = true;
+winnervideo.muted = true;
 
 loservideo.src ="https://christina5p.github.io/Are-you-a-dice-player/assets/image/lose.mp4";
 loservideo.alt = "loser";
 loservideo.type = "video/mp4";
+loservideo.autoplay = true;
+loservideo.loop = true;
+loservideo.muted = true
 
 //function to check playerschoice and give result and video
 function checkAnswer(correctNumber) {
@@ -166,19 +172,18 @@ function checkAnswer(correctNumber) {
  if (playerChoices.includes(correctNumber.toString()))  {
    messageElement.textContent = "You won";
   messageElement.appendChild(winnervideo);
-  winnervideo.autoplay = true
  
    console.log(winnervideo.autoplay);
 
   }   else {
   messageElement.textContent = "You lost";
   messageElement.appendChild(loservideo);
-  loservideo.autoplay = true
+  
   console.log(loservideo.autoplay);
   }
 }
 
-// move back to top when clicking "playagain" button
+// move back to top when clicking "play-again" button
 playAgainBtn.addEventListener("click", topFunction);
 function topFunction() {
    document.body.scrollTop = 0; // For Safari
