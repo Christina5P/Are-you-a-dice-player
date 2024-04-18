@@ -1,35 +1,27 @@
-<<<<<<< HEAD
-// to get to numbers and count players choice og number
-const playElement = document.getElementById("message");
-let choicecounter = 0;
-=======
+// to get to numbers and count players choice of number
 
-
-// to get to numbers and count players choice og number
 const playElement = document.getElementById("message");
 let choicecounter = 0;
 
->>>>>>> refs/remotes/origin/main
+
 // button and function to restart the game  
 const playAgainBtn = document.getElementById("play");
 playAgainBtn.addEventListener('click', function () {
-  let  choicecounter = 0;
-  playerChoices.length = 0; // empty choicers array
-  messageElement.textContent = ""; // clear message "Roll Dice"
- });
-<<<<<<< HEAD
-=======
+playerChoices.length = 0; // empty choicers array
+messageElement.textContent = ""; // clear message "Roll Dice"
 
->>>>>>> refs/remotes/origin/main
+ });
+
 // To roll the dice just once time 
 const myPlayBtn = document.getElementById("play");
 myPlayBtn.addEventListener('click', function () {
   message.textContent = "click here to roll dice";
   choicecounter = 0;
   buttons.forEach(button => {
-    button.style.backgroundColor = "#000000";
+  button.style.backgroundColor = "#000000";
   })
 });
+
 // Players choice of number 
 const playerScore = document.getElementById("player-score");
 const choice = ["1", "2", "3", "4", "5", "6"];   
@@ -86,6 +78,7 @@ function createDice(number) {
       [80, 80]
     ]
   };
+
   const dice = document.createElement("div");
   dice.classList.add("dice");
   for (const dotPosition of dotPositionMatrix[number]) {
@@ -99,13 +92,8 @@ function createDice(number) {
   return dice;
 }
 
-<<<<<<< HEAD
-const diceContainer = document.getElementById("dice-container");
-diceContainer.innerHTML = "" ; // clear dots to new roll
-=======
 const diceContainer = document.getElementById("diceContainer");
-diceContainer.innerHTML = "" ;
->>>>>>> refs/remotes/origin/main
+//diceContainer.innerHTML = "" ;
 const dice = createDice(6);
 diceContainer.appendChild(dice);
 
@@ -120,9 +108,9 @@ function rollDice() {
     // quit animation
     setTimeout(() => {
       diceSpans.forEach(span => span.classList.remove("roll"));
-      const correctNumber = rollDiceInternal(); // Anropa rollDiceInternal() och lagra resultatet i correctNumber
+      const correctNumber = rollDiceInternal(); // call function rollDiceInternal() to keep result in correctNumber
       checkAnswer(correctNumber);
-    },500);
+    },1000);
   }
 }
 
@@ -156,12 +144,9 @@ const loservideo = document.createElement("video");
 winnervideo.src = "https://christina5p.github.io/Are-you-a-dice-player/assets/image/win.mp4";
 winnervideo.alt = "winner";
 winnervideo.type = "video/mp4";
-<<<<<<< HEAD
-=======
 winnervideo.autoplay = true;
 winnervideo.loop = true;
 winnervideo.muted = true;
->>>>>>> refs/remotes/origin/main
 
 loservideo.src ="https://christina5p.github.io/Are-you-a-dice-player/assets/image/lose.mp4";
 loservideo.alt = "loser";
@@ -178,13 +163,9 @@ function checkAnswer(correctNumber) {
  if (playerChoices.includes(correctNumber.toString()))  {
    messageElement.textContent = "You won";
   messageElement.appendChild(winnervideo);
-<<<<<<< HEAD
   winnervideo.autoplay = true
 
-=======
- 
->>>>>>> refs/remotes/origin/main
-   console.log(winnervideo.autoplay);
+    console.log(winnervideo.autoplay);
 
   }   else {
   messageElement.textContent = "You lost";
@@ -194,22 +175,15 @@ function checkAnswer(correctNumber) {
   }
 }
 
-<<<<<<< HEAD
-// move back to top when clicking "playagain" button
-=======
 // move back to top when clicking "play-again" button
->>>>>>> refs/remotes/origin/main
 playAgainBtn.addEventListener("click", topFunction);
 function topFunction() {
    document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera*/
 }
 console.log(scrollTop);
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> refs/remotes/origin/main
  //messageElement.removeChild(winnervideo); // Ta bort vinnarvideon om den finns
   //messageElement.removeChild(loservideo); // Ta bort förlorarvideon om den finns
