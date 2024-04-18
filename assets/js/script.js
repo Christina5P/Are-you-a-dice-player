@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 // to get to numbers and count players choice og number
 const playElement = document.getElementById("message");
 let choicecounter = 0;
+=======
+
+
+// to get to numbers and count players choice og number
+const playElement = document.getElementById("message");
+let choicecounter = 0;
+
+>>>>>>> refs/remotes/origin/main
 // button and function to restart the game  
 const playAgainBtn = document.getElementById("play");
 playAgainBtn.addEventListener('click', function () {
@@ -8,6 +17,10 @@ playAgainBtn.addEventListener('click', function () {
   playerChoices.length = 0; // empty choicers array
   messageElement.textContent = ""; // clear message "Roll Dice"
  });
+<<<<<<< HEAD
+=======
+
+>>>>>>> refs/remotes/origin/main
 // To roll the dice just once time 
 const myPlayBtn = document.getElementById("play");
 myPlayBtn.addEventListener('click', function () {
@@ -35,6 +48,7 @@ function changeBoardColor(event) {
     choicecounter++;
   }
 }
+
 //create the dice
 function createDice(number) {
   const dotPositionMatrix = {
@@ -85,16 +99,21 @@ function createDice(number) {
   return dice;
 }
 
+<<<<<<< HEAD
 const diceContainer = document.getElementById("dice-container");
 diceContainer.innerHTML = "" ; // clear dots to new roll
+=======
+const diceContainer = document.getElementById("diceContainer");
+diceContainer.innerHTML = "" ;
+>>>>>>> refs/remotes/origin/main
 const dice = createDice(6);
 diceContainer.appendChild(dice);
 
 // roll Dice with dots 
 function rollDice() {
   if (message.textContent == "click here to roll dice") {
-    const diceContainer = document.getElementById('dice-container');
-    const diceSpans = diceContainer.querySelectorAll('span');
+    const diceContainer = document.getElementById("diceContainer");
+    const diceSpans = diceContainer.querySelectorAll("span");
 
     // Add class "roll" to get animation
     diceSpans.forEach(span => span.classList.add("roll"));
@@ -109,8 +128,8 @@ function rollDice() {
 
 //function to compare playerchoice and diceroll to get true or false (help with this function from perplexity)
 function rollDiceInternal() {
-  const diceContainer = document.getElementById('dice-container');
-  const diceSpans = diceContainer.querySelectorAll('span');
+  const diceContainer = document.getElementById("diceContainer");
+  const diceSpans = diceContainer.querySelectorAll("span");
   const numberOfRolls = diceSpans.length;
   const randomNumber = Math.floor(Math.random() * numberOfRolls) + 1;
 
@@ -129,6 +148,10 @@ function changeBoardColor(event) {
     
       }  console.log(playerChoices);
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> refs/remotes/origin/main
 // call the winner or loser video from result
 const messageElement = document.getElementById("result");
 const winnervideo = document.createElement("video");
@@ -136,10 +159,19 @@ const loservideo = document.createElement("video");
 winnervideo.src = "https://christina5p.github.io/Are-you-a-dice-player/assets/image/win.mp4";
 winnervideo.alt = "winner";
 winnervideo.type = "video/mp4";
+<<<<<<< HEAD
+=======
+winnervideo.autoplay = true;
+winnervideo.loop = true;
+winnervideo.muted = true;
+>>>>>>> refs/remotes/origin/main
 
 loservideo.src ="https://christina5p.github.io/Are-you-a-dice-player/assets/image/lose.mp4";
 loservideo.alt = "loser";
 loservideo.type = "video/mp4";
+loservideo.autoplay = true;
+loservideo.loop = true;
+loservideo.muted = true
 
 //function to check playerschoice and give result and video
 function checkAnswer(correctNumber) {
@@ -149,24 +181,38 @@ function checkAnswer(correctNumber) {
  if (playerChoices.includes(correctNumber.toString()))  {
    messageElement.textContent = "You won";
   messageElement.appendChild(winnervideo);
+<<<<<<< HEAD
   winnervideo.autoplay = true
 
+=======
+ 
+>>>>>>> refs/remotes/origin/main
    console.log(winnervideo.autoplay);
 
   }   else {
   messageElement.textContent = "You lost";
   messageElement.appendChild(loservideo);
-  loservideo.autoplay = true
+  
   console.log(loservideo.autoplay);
   }
 }
 
+<<<<<<< HEAD
 // move back to top when clicking "playagain" button
+=======
+// move back to top when clicking "play-again" button
+>>>>>>> refs/remotes/origin/main
 playAgainBtn.addEventListener("click", topFunction);
 function topFunction() {
    document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera*/
 }
 console.log(scrollTop);
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> refs/remotes/origin/main
  //messageElement.removeChild(winnervideo); // Ta bort vinnarvideon om den finns
   //messageElement.removeChild(loservideo); // Ta bort förlorarvideon om den finns

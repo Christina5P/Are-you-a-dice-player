@@ -1,4 +1,26 @@
-# Are-you-a-dice-player
+### Bet a dice
+
+Bet a dice" is a game for a quick bet.
+If you like numbers, dicegame and bets, this is a simple game to play.
+You choose 3 numbers from tje board for the bet. After that you roll the dice and see what the dice gets for number.
+If any of your choice is the same as the dot, you win! Otherwise you lose.
+The game is build with colours and animation to get it lively and fun.
+The idea is taken from the betwheel at the fairground.
+![image](https://github.com/Christina5P/Bet-a-dice/assets/160019695/8ced8037-0303-4cc3-a5fb-edce8a9292c5)
+
+## Contents
+
+You start at the homepage with instructions how to play and a playbutton to click, so you are directed straight to the game.
+![image](https://github.com/Christina5P/Bet-a-dice/assets/160019695/3ed90702-9f59-408b-bba4-a034d71cf2c9)
+
+You choose 3 numbers by clicking on them and you see clearly your choice by changing colours of your choices.
+After that you click on the "click-text" to make a roll of the dice.
+The dice will generate a number and compare if it is the same number you have choosen.
+![image](https://github.com/Christina5P/Bet-a-dice/assets/160019695/bd969070-13ce-4499-970d-eebea709975d)
+
+You fet a result and can easily click the "play again" button to restart the game.
+If you click, you get to the top to choose new numbers and don´t have to scroll back.
+
 
 -https://balsamiq.com/ 
  Build the skeleton
@@ -68,4 +90,8 @@ responsive check to css
 Tutoring scroll up the window
 
 - https://stackoverflow.com/questions/69427603/autoplay-on-video-is-not-working-after-refreshing-page
+<<<<<<< HEAD
 Investigate video autoplay
+=======
+Investigate video autoplay
+>>>>>>> refs/remotes/origin/main
