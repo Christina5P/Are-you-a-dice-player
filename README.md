@@ -1,9 +1,13 @@
 # Are-you-a-dice-player
 
--https://balsamiq.com/ - Build the skeleton
+-https://balsamiq.com/ 
+ Build the skeleton
 
 -https://www.canva.com/
 Pictures when you win or loose
+
+- https://imagecolorpicker.com/color-code/ff7800 
+ Choose colours
 
 -https://betterprogramming.pub/creating-dice-in-flexbox-in-css-a02a5d85e516
 Tutoring/inspiration to create dice with dots with css
