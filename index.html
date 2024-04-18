@@ -3,72 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!-- Font "Honk and Nabla"-->
-     
-<link href='https://fonts.googleapis.com/css?family=Honk' rel='stylesheet'>
-<link href="https://fonts.googleapis.com/css2?family=Nabla&display=swap" rel="stylesheet">
-
-<!--Favicon-->
-<link rel="icon" sizes="192x192" href="assets/image/android-chrome-192x192.png">
-<link rel="icon" sizes="512x512" href="assets/image/android-chrome-512x512.png">
-<link rel="icon" sizes="16x16" href="assets/image/favicon-16x16.png">
-<link rel="icon" sizes="32x32" href="assets/image/favicon-32x32.png">
-<link rel="apple-touch-icon" sizes="180x180" href="assets/image/apple-touch-icon.png">
-
-<style>
-        @import url('https://fonts.googleapis.com/css2?family=Honk&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Nabla&display=swap');
- 
-  </style> 
-        
+    
+    <!-- Font "Honk"-->
+    <link href='https://fonts.googleapis.com/css?family=Honk' rel='stylesheet'>
+         
 <link rel="stylesheet" href="assets/css/style.css">
     <title>Dicegame</title>
 </head>
 
 <body>
+
     <!--Header-->
     <header>
-      <nav> 
-        <a href="index.html">
-       
-              <!-- navigation-->
-              <div> <a href= "firstpage.html"> Back to menu</div>  </a>
-        <h1 class="heading">Are you a dice player?</h1>
-               
-          </nav>  
-    </header>
-         
-    <section class="gamearea">
-  
-         <!--Players board too choose numners-->
-   
-    <p> Choose 3 numbers:</p>
+      
+    <h1 class="heading">Bet the dice</h1>
+   </a>
+</header>
 
-    <div id="board" class="button-container">
-<button aria-label="1" data-choice="0" class="control" value="1">1</button>
-<button aria-label="2" data-choice="1" class="control" value="2">2</button>
-<button aria-label="3" data-choice="2" class="control" value="3">3</button>
-<button aria-label="4" data-choice="3" class="control" value="4">4</button>
-<button aria-label="5" data-choice="4" class="control" value="5">5</button>
-<button aria-label="6" data-choice="5" class="control" value="6">6</button>
-</div>
-</section>
+<!-- Game instructions-->
+  <div class="rules">
+      <h2> How to play </h2>
+      <p> Pick 3 numbers on the board by click on the buttons.
+        After that you roll the dice by clicking the "click here" -button.
+        <hr>
+        If the dots on the dice is the same as one of the number you picked, you win the game!
+        if its not, you lose.
+    <hr>
+Good luck!</p>
+         </div>
 
-
-<div id="message" onclick="rollDice()">click here to roll dice</div>
-
-
-<div id="dice-container">
-
-</div>
-
-<div id="result"></div>
-
-<button class="play" id="play">Play again</button>
-<footer>
-
-</footer>
-
+         <!-- button to start play-->
+    <button class="play" id="play"> 
+       <a  href="play.html">Play</a>        
+    </button>
+    
+    <!-- link to JS script-->
    <script src="assets/js/script.js"></script>
+
+   <footer>
+    <p> Coyright ○ Christina.åhman 2024 </p>
+    </footer>
+    
 </body>
+
 </html>
