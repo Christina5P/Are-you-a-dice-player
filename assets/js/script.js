@@ -92,7 +92,7 @@ function createDice(number) {
   return dice;
 }
 
-const diceContainer = document.getElementById("diceContainer");
+let diceContainer = document.getElementById("diceContainer");
 //diceContainer.innerHTML = "" ;
 const dice = createDice(6);
 diceContainer.appendChild(dice);
@@ -100,8 +100,8 @@ diceContainer.appendChild(dice);
 // roll Dice with dots 
 function rollDice() {
   if (message.textContent == "click here to roll dice") {
-    const diceContainer = document.getElementById("diceContainer");
-    const diceSpans = diceContainer.querySelectorAll("span");
+    let diceContainer = document.getElementById("diceContainer");
+    let diceSpans = diceContainer.querySelectorAll("span");
 
     // Add class "roll" to get animation
     diceSpans.forEach(span => span.classList.add("roll"));
@@ -141,14 +141,14 @@ function changeBoardColor(event) {
 const messageElement = document.getElementById("result");
 const winnervideo = document.createElement("video");
 const loservideo = document.createElement("video");
-winnervideo.src = "https://christina5p.github.io/Are-you-a-dice-player/assets/image/win.mp4";
+winnervideo.src = "assets/image/win.mp4";
 winnervideo.alt = "winner";
 winnervideo.type = "video/mp4";
 winnervideo.autoplay = true;
 winnervideo.loop = true;
 winnervideo.muted = true;
 
-loservideo.src ="https://christina5p.github.io/Are-you-a-dice-player/assets/image/lose.mp4";
+loservideo.src ="assets/image/lose.mp4";
 loservideo.alt = "loser";
 loservideo.type = "video/mp4";
 loservideo.autoplay = true;
@@ -181,7 +181,7 @@ function topFunction() {
    document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera*/
 }
-console.log(scrollTop);
+
 
 
 
