@@ -148,10 +148,7 @@ function changeBoardColor(event) {
     
       }  console.log(playerChoices);
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> refs/remotes/origin/main
 // call the winner or loser video from result
 const messageElement = document.getElementById("result");
 const winnervideo = document.createElement("video");
