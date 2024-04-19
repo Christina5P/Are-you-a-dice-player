@@ -28,6 +28,9 @@ If you click, you get to the top to choose new numbers and don´t have to scroll
 -https://www.canva.com/
 Pictures when you win or loose
 
+- https://www.istockphoto.com/se/collaboration/boards/aErC0W69g0if3TpFdJwx6Q
+Pictures of euro
+
 - https://imagecolorpicker.com/color-code/ff7800 
  Choose colours
 

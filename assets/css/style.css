@@ -9,11 +9,25 @@
 
 /* Heading logo */
 header {
-    text-align: left;
-    font-size: 1rem;
+   
+    font-size: 1.5rem;
     margin-top: 0%;
-}
+     }
 
+     .image-container {
+        font-size: xx-large;
+        display: flex;
+        justify-content: center;
+        gap: 20px; 
+        margin:0%
+    
+      }
+      
+      .image {
+        width: 100px;
+        height: auto;
+        margin-right: auto;
+      }
 
 a{
     font-size: 1.5em;
