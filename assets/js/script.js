@@ -96,23 +96,18 @@ let diceContainer = document.getElementById("diceContainer");
 const dice = createDice(6);
 diceContainer.appendChild(dice);
 
+
 // roll Dice with dots 
 function rollDice() {
   if (message.textContent == "click here to roll dice") {
     let diceContainer = document.getElementById("diceContainer");
     let diceSpans = diceContainer.querySelectorAll("span");
 
-    // Add class "roll" to get animation
-    diceSpans.forEach(span => span.classList.add("roll"));
+    // Add animation
+    requestAnimationFrame(animateDice);
 
     // quit animation
-    setTimeout(() => {
-      diceSpans.forEach(span => span.classList.remove("roll"));
-      const correctNumber = rollDiceInternal(); // call function rollDiceInternal() to keep result in correctNumber
-      checkAnswer(correctNumber);
-    },1000);
-  }
-}
+ 
 
 //function to compare playerchoice and diceroll to get true or false (help with this function from perplexity)
 function rollDiceInternal() {
@@ -179,6 +174,6 @@ function topFunction() {
    document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera*/
 }
+  }
 
-
-
+}
