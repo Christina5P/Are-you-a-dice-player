@@ -1,6 +1,8 @@
 // to get to numbers and count players choice of number
 const playElement = document.getElementById("message");
 let choicecounter = 0;
+let allImages = document.querySelectorAll(".image");
+
 // To roll the dice just once time 
 const myPlayBtn = document.getElementById("play");
 myPlayBtn.addEventListener('click', function () {
@@ -28,13 +30,12 @@ const playAgainBtn = document.getElementById("play");
 playAgainBtn.addEventListener('click', function () {
 playerChoices.length = 0; // empty choicers array
 messageElement.textContent = ""; // clear message "Roll Dice"
-document.querySelectorAll(".image").forEach(img => img.classList.remove("selected"));
-    });
+//document.querySelectorAll(".image").forEach(img => img.classList.remove("hidden"));
+   });
+  
 
  
 
- //   document.querySelectorAll(".image").forEach(img => img.classList.add("hidden"));
-    
     function caches(event) {
       if (choicecounter < 1) {
         console.log("click cash");
@@ -42,8 +43,8 @@ document.querySelectorAll(".image").forEach(img => img.classList.remove("selecte
         event.target.classList.remove("hidden");
        event.target.classList.add("selected");
         choicecounter++;         
-      }
-      console.log(event.target);
+      }    console.log(event.target);
+     
     }
          
 
@@ -153,7 +154,7 @@ function rollDiceInternal() {
 }
      const playerChoices = [];
 function changeBoardColor(event) {
-  if (choicecounter < 3) {
+  if (choicecounter < 4) {
         event.target.style.backgroundColor = "#FFFFFF";
         playerChoices.push(event.target.value);
         choicecounter++;
@@ -174,6 +175,7 @@ loservideo.alt = "loser";
 loservideo.type = "video/mp4";
 loservideo.autoplay = true;
 loservideo.muted = true
+
 //function to check playerschoice and give result and video
 function checkAnswer(correctNumber) {
    console.log("correctnumber", correctNumber);
@@ -191,6 +193,16 @@ function checkAnswer(correctNumber) {
   console.log(loservideo.autoplay);
   }
 }
+
+// replace all values when play again
+myPlayBtn.addEventListener("click", function() {
+  allImages.forEach(img => {
+    img.classList.remove("hidden");
+    img.classList.remove("selected");
+    console.log(allImages.remove);
+  });
+});
+
 // move back to top when clicking "play-again" button
 playAgainBtn.addEventListener("click", topFunction);
 function topFunction() {
@@ -198,11 +210,5 @@ function topFunction() {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera*/
 }
 
-// move back to top when clicking "play-again" buttongit
-playAgainBtn.addEventListener("click", topFunction);
-function topFunction() {
-   document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera*/
-}
   
 
