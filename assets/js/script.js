@@ -30,7 +30,6 @@ const playAgainBtn = document.getElementById("play");
 playAgainBtn.addEventListener('click', function () {
 playerChoices.length = 0; // empty choicers array
 messageElement.textContent = ""; // clear message "Roll Dice"
-//document.querySelectorAll(".image").forEach(img => img.classList.remove("hidden"));
    });
   
 
@@ -117,10 +116,13 @@ function createDice(number) {
   }
   return dice;
 }
+
 let diceContainer = document.getElementById("diceContainer");
 //diceContainer.innerHTML = "" ;
 const dice = createDice(6);
 diceContainer.appendChild(dice);
+dice.style.animation = 'none';
+
 
 // roll Dice with dots 
 function rollDice() {
@@ -128,19 +130,55 @@ function rollDice() {
     let diceContainer = document.getElementById("diceContainer");
     let diceSpans = diceContainer.querySelectorAll("span");
 
-    // Add class "roll" to get animation
-    diceSpans.forEach(span => span.classList.add("roll"));
+   
+    const randomNumber = Math.floor(Math.random() * 6) + 1;
+    const dice = createDice(randomNumber);
+    diceContainer.innerHTML = "";
+    diceContainer.appendChild(dice);
 
-    // quit animation
-    setTimeout(() => {
-      diceSpans.forEach(span => span.classList.remove("roll"));
-      const correctNumber = rollDiceInternal(); // call function rollDiceInternal() to keep result in correctNumber
-      checkAnswer(correctNumber);
-    },1000);
-  }
-}
+    
+//Start animation
+setTimeout(() => {
+  dice.style.animation = 'roll 8s infinite linear';
+}, 100);
 
-//function to compare playerchoice and diceroll to get true or false (help with this function from perplexity)
+ setTimeout(() => {
+  diceSpans.forEach(span => span.classList.remove("roll"));
+  const correctNumber = rollDiceInternal(); // call function rollDiceInternal() to keep result in correctNumber
+  checkAnswer(correctNumber);
+}, 3100);
+     switch (randomNumber) {
+              case 1:
+                  dice.style.transform = 'rotateX(0deg) rotateY(0deg)';
+                  break;
+                case 6:
+                  dice.style.transform = 'rotateX(180deg) rotateY(0deg)';
+                  break;
+                case 2:
+                  dice.style.transform = 'rotateX(-90deg) rotateY(0deg)';
+                  break;
+                case 5:
+                  dice.style.transform = 'rotateX(90deg) rotateY(0deg)';
+                  break;
+                case 3:
+                  dice.style.transform = 'rotateX(0deg) rotateY(90deg)';
+                  break;
+                case 4:
+                  dice.style.transform = 'rotateX(0deg) rotateY(-90deg)';
+                  break;
+                default:
+                  break;
+          }
+  
+          
+dice.style.animation = 'roll';
+
+console.log("rollDice");
+        }
+      }
+
+          //function to compare playerchoice and diceroll to get true or false (help with this function from perplexity)
+
 function rollDiceInternal() {
   const diceContainer = document.getElementById("diceContainer");
   const diceSpans = diceContainer.querySelectorAll("span");
@@ -226,5 +264,5 @@ function topFunction() {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera*/
 }
 }
-  
+
 

@@ -5,7 +5,7 @@
     font-family: 'Honk', "Raleway", sans-serif;
     font-size: 40px;
     text-align: center;
-}
+ }
 
 /* Heading logo */
 header {
@@ -49,7 +49,7 @@ h1{
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 .rules {
@@ -134,15 +134,120 @@ button:hover {
     border-radius: 10px;
     font-family:sans-serif;
     position: absolute;
+   }
+
+@keyframes roll {
+  50% {
+      transform: rotateX(455deg) rotateY(455deg);
   }
+}
+
+.face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    border: 5px solid #f6f3f0;
+    transform-style: preserve-3d;
+    background: linear-gradient(
+        145deg, #dddbd8, #fff
+    );
+}
+
+.face::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background: #f6f3f0;
+    transform: translateZ(-1px);
+}
+
+.face::after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #131210;
+}
+
+.front {
+    transform: translateZ(50px);
+}
+
+.back {
+    transform: rotateX(180deg) translateZ(50px);
+}
+
+.top {
+    transform: rotateX(90deg) translateZ(50px);
+}
+
+.bottom {
+    transform: rotateX(-90deg) translateZ(50px);
+}
+
+.right {
+    transform: rotateY(90deg) translateZ(50px);
+}
+
+.left {
+    transform: rotateY(-90deg) translateZ(50px);
+}
+
+.front::after {
+    width: 30px;
+    height: 30px;
+    background: #f63330;
+    margin: -15px 0 0 -15px;
+}
+
+.back::after {
+    margin: -35px 0 0 -30px;
+    box-shadow: 40px 0,
+                0 25px,
+                40px 25px,
+                0 50px,
+                40px 50px;
+}
+
+.top::after {
+    margin: -30px 0 0 -30px;
+    box-shadow: 40px 40px;
+}
+
+.bottom::after {
+    margin: -36px 0 0 -36px;
+    box-shadow: 26px 26px,
+                52px 52px,
+                52px 0,
+                0 52px;
+}
+
+.right::after {
+    margin: -30px 0 0 -30px;
+    box-shadow: 40px 0,
+    0 40px,
+    40px 40px;
+}
+
+.left::after {
+    margin: -35px 0 0 -35px;
+    box-shadow: 25px 25px,
+                50px 50px;
+}
   
   /*dots on dice*/
   .dice-dot {
     --top: 0%;
     --left: 0%;
 
-    width: 5%; 
-    height: 5%;
+    width: 10%; 
+    height: 10%;
     background-color: black; 
     border-radius: 50%; /* style them to dot */
     position: absolute;
@@ -151,22 +256,6 @@ button:hover {
  
   }
   
-  /* animation to the dice for rotation */
-@keyframes roll {
-    0% { transform: rotateY(0deg); }
-    50% { transform: rotateY(180deg); }
-    100% { transform: rotateY(0deg); }
-  }
-  
- /*styling and animation for span "roll" */
-@keyframes mergeAnimation {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
-}
-
-
-
 /*  Game layout */
 #gamearea {
     width: 75%;
@@ -174,7 +263,6 @@ button:hover {
     text-align: center;
    
    }
-
    
 /* board with players choice of number*/
 .control {
