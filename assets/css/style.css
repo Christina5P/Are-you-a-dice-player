@@ -14,29 +14,24 @@ header {
     margin-top: 0%;
      }
 
+     /* container for pictures of euro*/
      .image-container {
         font-size: xx-large;
         display: flex;
         justify-content: center;
         gap: 20px; 
         margin:0%
-    
-      }
+          }
       
       .image {
-        width: 100px;
+        width: 10rem;
         height: auto;
         margin-right: auto;
       }
 
-      image.selected {
-        border: 3px solid #007bff;
-        border-radius: 5px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        transform: scale(1.2);
-      }
+     /* hide img after players choice*/
       .image.hidden {
-        display: none; /* Döljer elementet och tar bort det från layouten */
+        display: none; 
       }
 
 a{

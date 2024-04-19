@@ -178,18 +178,34 @@ loservideo.muted = true
 
 //function to check playerschoice and give result and video
 function checkAnswer(correctNumber) {
-   console.log("correctnumber", correctNumber);
-   console.log(playerChoices);
- 
+  const selectedImage = document.querySelector(".image.selected");
+  
+  if (selectedImage) {
  if (playerChoices.includes(correctNumber.toString()))  {
-   messageElement.textContent = "You won";
-  messageElement.appendChild(winnervideo);
-  winnervideo.autoplay = true
+   switch (selectedImage.id) {
+    case "10":
+      messageElement.textContent = "You won 10 euros!";
+      break;
+    case "50":
+      messageElement.textContent = "You won 50 euros!";
+      break;
+    case "100":
+      messageElement.textContent = "You won 100 euros!";
+      break;
+      default:
+        messageElement.textContent = "You won!";
+    }
+    messageElement.appendChild(winnervideo);
+    winnervideo.autoplay = true;
     console.log(winnervideo.autoplay);
+
   }   else {
   messageElement.textContent = "You lost";
   messageElement.appendChild(loservideo);
   
+  console.log("correctnumber", correctNumber);
+  console.log(playerChoices);
+  console.log(selectedImage)
   console.log(loservideo.autoplay);
   }
 }
@@ -209,6 +225,6 @@ function topFunction() {
    document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera*/
 }
-
+}
   
 
