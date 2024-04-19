@@ -1,12 +1,6 @@
 // to get to numbers and count players choice of number
 const playElement = document.getElementById("message");
 let choicecounter = 0;
-// button and function to restart the game  
-const playAgainBtn = document.getElementById("play");
-playAgainBtn.addEventListener('click', function () {
-playerChoices.length = 0; // empty choicers array
-messageElement.textContent = ""; // clear message "Roll Dice"
- });
 // To roll the dice just once time 
 const myPlayBtn = document.getElementById("play");
 myPlayBtn.addEventListener('click', function () {
@@ -16,6 +10,43 @@ myPlayBtn.addEventListener('click', function () {
   button.style.backgroundColor = "#000000";
   })
 });
+
+
+// Players bet of value 
+const betScore = document.getElementById("bet-score");
+const value = ["10", "50", "100",];   
+const cashes = document.querySelectorAll(".image");
+  
+   // keep picked value in a box
+    cashes.forEach(cash => {
+      cash.addEventListener("click", caches);
+    });
+
+    
+// button and function to restart the game  
+const playAgainBtn = document.getElementById("play");
+playAgainBtn.addEventListener('click', function () {
+playerChoices.length = 0; // empty choicers array
+messageElement.textContent = ""; // clear message "Roll Dice"
+document.querySelectorAll(".image").forEach(img => img.classList.remove("selected"));
+    });
+
+ 
+
+ //   document.querySelectorAll(".image").forEach(img => img.classList.add("hidden"));
+    
+    function caches(event) {
+      if (choicecounter < 1) {
+        console.log("click cash");
+        document.querySelectorAll(".image").forEach(img => img.classList.add("hidden"));
+        event.target.classList.remove("hidden");
+       event.target.classList.add("selected");
+        choicecounter++;         
+      }
+      console.log(event.target);
+    }
+         
+
 // Players choice of number 
 const playerScore = document.getElementById("player-score");
 const choice = ["1", "2", "3", "4", "5", "6"];   
@@ -24,6 +55,7 @@ buttons.forEach(button => {
   button.addEventListener("click", changeBoardColor);
   
 });
+
 // change colour of picked cards with number - 3 cards
 function changeBoardColor(event) {
     if (choicecounter < 3) {
@@ -34,6 +66,7 @@ function changeBoardColor(event) {
     choicecounter++;
   }
 }
+
 //create the dice
 function createDice(number) {
   const dotPositionMatrix = {
@@ -165,7 +198,7 @@ function topFunction() {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera*/
 }
 
-// move back to top when clicking "play-again" button
+// move back to top when clicking "play-again" buttongit
 playAgainBtn.addEventListener("click", topFunction);
 function topFunction() {
    document.body.scrollTop = 0; // For Safari

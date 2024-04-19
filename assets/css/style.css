@@ -29,6 +29,16 @@ header {
         margin-right: auto;
       }
 
+      image.selected {
+        border: 3px solid #007bff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        transform: scale(1.2);
+      }
+      .image.hidden {
+        display: none; /* Döljer elementet och tar bort det från layouten */
+      }
+
 a{
     font-size: 1.5em;
 }
