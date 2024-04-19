@@ -104,7 +104,7 @@ function rollDice() {
     let diceSpans = diceContainer.querySelectorAll("span");
 
     // Add animation
-    requestAnimationFrame(animateDice);
+  //  requestAnimationFrame(animateDice);
 
     // quit animation
  
