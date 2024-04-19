@@ -209,16 +209,24 @@ video {
        }
 
        h1 {
-        background-color: aqua;
+        background-color: rgb(81, 155, 155);
        }
 
     .play{
         margin: 10%;
-        background-color: rgb(24, 84, 84);
-        font-family: "Bungee Spice", sans-serif;
-      
+        background-color:rgb(81, 155, 155);
+        font-family:Bungee Spice;   
+    }
+
+.rules {
+    font-size: 2rem;
+     font-family:Bungee Spice; 
+     font-style: normal;
 }
-}
+.bungee-spice-regular {
+    font-family: "Bungee Spice", sans-serif;
+    font-weight: 400;
+    font-style: normal;}
 
 @media screen and (min-width: 768px)  {
   
@@ -247,4 +255,4 @@ h2 {
     position: absolute;
   }
 }
- 
+}

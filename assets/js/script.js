@@ -1,5 +1,4 @@
 // to get to numbers and count players choice of number
-
 const playElement = document.getElementById("message");
 let choicecounter = 0;
 
@@ -105,6 +104,7 @@ function rollDice() {
 
     // Add class "roll" to get animation
     diceSpans.forEach(span => span.classList.add("roll"));
+
     // quit animation
     setTimeout(() => {
       diceSpans.forEach(span => span.classList.remove("roll"));
@@ -145,14 +145,12 @@ winnervideo.src = "assets/image/win.mp4";
 winnervideo.alt = "winner";
 winnervideo.type = "video/mp4";
 winnervideo.autoplay = true;
-winnervideo.loop = true;
 winnervideo.muted = true;
 
 loservideo.src ="assets/image/lose.mp4";
 loservideo.alt = "loser";
 loservideo.type = "video/mp4";
 loservideo.autoplay = true;
-loservideo.loop = true;
 loservideo.muted = true
 
 //function to check playerschoice and give result and video
@@ -184,6 +182,3 @@ function topFunction() {
 
 
 
-
- //messageElement.removeChild(winnervideo); // Ta bort vinnarvideon om den finns
-  //messageElement.removeChild(loservideo); // Ta bort förlorarvideon om den finns
