@@ -169,7 +169,7 @@ https://ui.dev/amiresponsive :
 
 ## Acknowledgements
 
-I have some imported people around me to hepled me out with PP2
+I have some imported people around me to helped me out with PP2
 
 * Tutor Ernst from "Digitala lyftet", who has spent hours with me to explain and solved my problems.
 * My student fellow Josefin Yoshida-Dahlqvist, who always hold my hand and try to help me out.
