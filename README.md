@@ -130,17 +130,26 @@ The site was deployed to GitHub pages. The way I manage that:
 
 ## Testing
 
+I have done a lot of manual testing:
+![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/316554a3-97b7-4b1b-804e-580e5a4a3847)
+
+
 ### HTML Validator
-I have checked the HTML codes through https://validator.w3.org/
+I have checked the HTML codes through https://validator.w3.org.
 
 ![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/a378c126-ad07-4861-a338-8e00ad37bad1)
 
 
 ### CSS Validator 
-I have checked css code through https://jigsaw.w3.org/css-validator/#validate_by_input
+I have checked css code through https://jigsaw.w3.org/css-validator/#validate_by_input.
+
 ![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/9fe4711b-9699-4092-9474-ce2f4c5e05af)
 
-I have checked JS codes through  
+I have checked JS codes through https://codebeautify.org/jsvalidate.
+The validator displayed 3 errors, but when I tried to change that variable, the functions stopped working, so I ignored the validators answer.
+
+![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/d2bdf446-382e-4355-a1e6-2f95bf281375)
+
 
 ### Lighthouse
 ![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/fc09d58b-adc3-461d-9966-7042233d9250)
