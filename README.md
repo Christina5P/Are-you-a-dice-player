@@ -52,7 +52,7 @@ I schoosed i colourful font to get a happy feeling and border-radius so the butt
 
 ![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/f8f5c177-7f44-40c7-83d6-3afea1209afc)
 
-WHen I tested the game on smaller screens as mobile and ipad, I saw the font won´t show the coloursand it was dark approach, so I changed the background colour and used the font Bungee instead of.
+When I tested the game on smaller screens as mobile and ipad, I saw the font won´t show the coloursand it was dark approach, so I changed the background colour and used the font Bungee instead of.
 
 ![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/4b505aa9-ada0-4c8c-ac46-74bea8b80cf6)
 
@@ -100,6 +100,9 @@ To get codes explained in Swedish
 -https://www.perplexity.ai/ 
 Troubleshout/explanation of written codes
 
+- https://chat.openai.com/
+To get help with suggestion when I debug functions text.content
+
 - https://dcode.domenade.com/tutorials/how-to-create-a-dice-roll-game-with-html-css-and-javascript
 Tutoring dice and dots
 
@@ -142,8 +145,8 @@ responsive check to css
 Tutoring scroll up the window
 
 - https://stackoverflow.com/questions/69427603/autoplay-on-video-is-not-working-after-refreshing-page
-<<<<<<< HEAD
 Investigate video autoplay
-=======
-Investigate video autoplay
->>>>>>> refs/remotes/origin/main
+
+- https://www.youtube.com/watch?v=XTF5jXDr2H8
+Tutoring and help me with codes for dice animation
+
