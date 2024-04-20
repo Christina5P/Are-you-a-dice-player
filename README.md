@@ -78,7 +78,7 @@ I have also made a handpointer when you click on numbers.
 Counter how many rolls you need to reach a specific value (/or for ex. 24 points).
 A counter to add your bet (/or the dice number) for every times you win and count how many rolls you need to reach 24.
 
-# Best score
+* Best score
 On right hand side tha game will represent a best score list. 
 
 ## Media
