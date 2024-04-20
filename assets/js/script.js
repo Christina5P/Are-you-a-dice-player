@@ -56,17 +56,40 @@ buttons.forEach(button => {
   
 });
 
+
+
 // change colour of picked cards with number - 3 cards
+
+ const playerChoices = [];
+
 function changeBoardColor(event) {
-    if (choicecounter < 3) {
-    console.log("click button");
-    console.log(event.target.value);
-    event.target.style.backgroundColor = "#FFFFFF";
-    board.style.transition = ".5s ease";
-    choicecounter++;
+  let selectedImage = document.querySelector(".image.selected");
+  if (selectedImage) {
+
+    if (selectedImage.id === "100" && choicecounter < 2) {
+      console.log("click button");
+      console.log(event.target.value);
+      event.target.style.backgroundColor = "#FFFFFF";
+      board.style.transition = ".5s ease";
+      playerChoices.push(event.target.value);
+      choicecounter++;
+    } else if (selectedImage.id === "50" && choicecounter < 3) {
+      console.log("click button");
+      console.log(event.target.value);
+      event.target.style.backgroundColor = "#FFFFFF";
+      board.style.transition = ".5s ease";
+      playerChoices.push(event.target.value);
+      choicecounter++;
+    } else if (selectedImage.id === "10" && choicecounter < 4) {
+      console.log("click button");
+      console.log(event.target.value);
+      event.target.style.backgroundColor = "#FFFFFF";
+      board.style.transition = ".5s ease";
+      playerChoices.push(event.target.value);
+      choicecounter++;
+    }
   }
 }
-
 //create the dice dots position
 function createDice(number) {
   const dotPositionMatrix = {
@@ -190,16 +213,8 @@ function rollDiceInternal() {
      message.textContent = "dice rolled: ";
      return randomNumber;
 }
-     const playerChoices = [];
-function changeBoardColor(event) {
-  if (choicecounter < 4) {
-        event.target.style.backgroundColor = "#FFFFFF";
-        playerChoices.push(event.target.value);
-        choicecounter++;
     
-      }  console.log(playerChoices);
-}
-
+   
 // call the winner or loser video from result
 const messageElement = document.getElementById("result");
 const winnervideo = document.createElement("video");
