@@ -30,31 +30,9 @@ const cashes = document.querySelectorAll(".image");
    // keep picked value in a box
     cashes.forEach(cash => {
       cash.addEventListener("click", caches);
-    });
-
-    const selectedImage = document.querySelector(".image.selected");
-    const picknumber = document.getElementById("picknumber")
-        console.log("pick number");
-
-    //text to descibe how many numbers you pick
-    function textContent() {
-          if (selectedImage) {
-        const picknumberElement = document.getElementById("picknumber");
-                if (selectedImage.id === "100") {
-          picknumberElement.textContent = "Pick 1 number";
-          console.log(textContent());
-        } else if (selectedImage.id === "50") {
-          picknumberElement.textContent = "Pick 2 numbers";
-          console.log(textContent());
-        } else if (selectedImage.id === "10") {
-          picknumberElement.textContent = "Pick 3 numbers";
-                console.log(textContent());
-       
-        }
-      }
-    }
-
+          });
  
+   
 // pick value from images
     function caches(event) {
       if (choicecounter < 1) {
@@ -64,9 +42,34 @@ const cashes = document.querySelectorAll(".image");
        event.target.classList.add("selected");
         choicecounter++;         
       }    console.log(event.target);
-     
-    }
+  
+        const selectedImage = document.querySelector(".image.selected");
+         console.log(selectedImage);
          
+  // Call textContent function here
+  textContent(selectedImage);
+        }
+
+   
+ 
+       //text to descibe how many numbers you pick
+    function textContent(selectedImage) {
+      var picknumberElement = document.getElementById("picknumber")
+       
+      console.log("picknumber2");
+
+           if (selectedImage.id === "100") {
+      picknumberElement.textContent = "Now you can pick 1 number";
+      console.log(textContent());
+    } else if (selectedImage.id === "50") {
+      picknumberElement.textContent = "Now you can pick 2 numbers";
+      console.log(textContent());
+    } else if (selectedImage.id === "10") {
+      picknumberElement.textContent = "Now you can pick 3 numbers";
+            console.log(textContent());
+       }
+  };
+
 
 // Players choice of number 
 const playerScore = document.getElementById("player-score");
@@ -303,3 +306,21 @@ function topFunction() {
   
 
 
+       //text to descibe how many numbers you pick
+  /*  function textContent() {
+          if (selectedImage) {
+         let picknumberElement = document.getElementById("picknumber");
+                 if (selectedImage.id === "100") {
+           picknumberElement.textContent = "Pick 1 number";
+           console.log(textContent());
+           console.log("number1");
+         } else if (selectedImage.id === "50") {
+           picknumberElement.textContent = "Pick 2 numbers";
+           console.log(textContent());
+         } else if (selectedImage.id === "10") {
+           picknumberElement.textContent = "Pick 3 numbers";
+                 console.log(textContent());
+        
+         }
+       }
+     }*/
