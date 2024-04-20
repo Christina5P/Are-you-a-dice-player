@@ -148,6 +148,15 @@ I have checked JS codes through
 ### Wave
 ![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/a03cacab-a626-4570-b396-f0c1e513bbf2)
 
+## Responsive testing
+
+I have tested the responsitive in 2 different websites:
+https://responsivedesignchecker.com :
+![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/47451997-3085-423c-8a7c-b8bafbda3b45)
+
+https://ui.dev/amiresponsive :
+![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/e1acb5e6-a163-47ad-ae11-023d12263850)
+
 
 ## Acknowledgements
 
