@@ -1,4 +1,4 @@
-### Bet a dice
+# Bet a dice
 
 "Bet a dice" is a game for a quick bet.
 If you like numbers, dicegame and bets, this is a simple game to play.
@@ -11,18 +11,20 @@ After you have bet and clicked on numbers, you click to roll a dice.
 The dice will show you the result and if you have the number in your choises, you win the bet. Otherwise you lose.
 <hr>
 The game is build with colours and animation to get it lively and fun.
+<hr>
 The idea is taken from the betwheel at the fairground.
-![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/d3e93067-4966-4111-968c-b943f4ba967d)
-
+<hr
+![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/411fbb65-f652-473f-8f3b-c92b3181af7f)
 
 ## Contents
 
 # Homepage
 
 You start at homepage with instructions how to play and a playbutton to click. After click you go directed to the game.
+>br>
 ![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/d6031e9c-6436-4c01-92c4-fa445202571c)
-br 
-# Game
+
+### Game
 On the top you have a button "Back to the menu" if you want to read the instructions again.
 
 You start to bet from 3 different values and you se easily your bet, since the other values dissapear after your choice.
@@ -40,11 +42,13 @@ https://tvmspace-my.sharepoint.com/:v:/r/personal/christina_ahman_tv4_se/Documen
 And it´s harder feeling to lose, but make it a new try with the pulling man.
 https://tvmspace-my.sharepoint.com/:v:/r/personal/christina_ahman_tv4_se/Documents/Desktop/lose.mp4?csf=1&web=1&e=D9FITy
 
-After your paly you can easily click the "play again" button to restart the game.
+After your play you can easily click the "play again" button to restart the game.
+<hr>
 If you click, you get to the top to choose new numbers and don´t have to scroll back.
 
-# Footer 
+### Footer 
 A copyright of the game creator.
+![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/65a23b4a-ff31-48e9-965a-8643fa1fb635)
 
 ## Structure
 
@@ -65,15 +69,17 @@ When I tested the game on smaller screens as mobile and ipad, I saw the font won
 ![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/4b505aa9-ada0-4c8c-ac46-74bea8b80cf6)
 
 I have also create an own Head icon to use in head
+<hr>
 ![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/8edbcdc8-6333-4547-a5b7-bb4ffa6381b5)
 
+I have also made a handpointer when you click on numbers.
 ## Future Features to Implement
 
-# Counter how many rolls you need to reach a specific value (/or for ex. 24 points)
+Counter how many rolls you need to reach a specific value (/or for ex. 24 points).
 A counter to add your bet (/or the dice number) for every times you win and count how many rolls you need to reach 24.
 
 # Best score
-Right hand side will represent a best score list. 
+On right hand side tha game will represent a best score list. 
 
 ## Media
 
@@ -82,43 +88,59 @@ Right hand side will represent a best score list.
 - the winner and loservideo is pictures taking from www.canva.com and edit by me to an animated 5seconds video.
 
 ## Deployment
-The site was created using Visual Studio code editor and is continuing push to GitHub. Readme is written in VS code space / Git Hub and I have pull and push between code space and repository. The codes I´ve been using is git pull / git add . / git commit -m"" / git push
+The site was created from Gitpod and is continuing push to GitHub.
+Readme is written in Gitpod / Git Hub and I have pull and push between code space and repository.
+ The codes I´ve been using is git pull / git add . / git commit -m"" / git push.
 
 The site was deployed to GitHub pages. The way I manage that:
 
-Navigate to my repository
-From the setting tab (above the repository) click setting tab.
-Select Pages in the left-hand menu
-Section Build and deployment- source select Deploy from a branch
-Select main in first area and root in second area
-Save
-You find the public site under GitHub pages if you go to Deployments on right-hand menu 
+* Navigate to my repository
+* From the setting tab (above the repository) click setting tab.
+* Select Pages in the left-hand menu
+* Section Build and deployment- source select Deploy from a branch
+* Select main in first area and root in second area
+* Save
+* You find the public site under GitHub pages if you go to Deployments on right-hand menu 
 ![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/a6e68615-4286-49be-b59c-9ede37b40dec)
 
 ## Bugs 
-Through this project I have notised bugs that has been very instructive for me.
-The biggest issues I had was:
+ Through this project I have notised bugs that has been very instructive for me.
+ The biggest issues I had was:
 -The dots on the dice. It was hard to get them in possition and get them to stay inside the dice ;-)
-The resolution was to chenge the position od dots in css.
+ The resolution was to chenge the position od dots in css.
 
 -To get the result if you won or lost by comparing the dice number with those number you have choosen.
-I got stock since a thought I had enough function for both above but I solved it to make one more function with InternalDiceroll.
+ I got stock since a thought I had enough function for both above but I solved it to make one more function with InternalDiceroll.
 
 - Every time I loaded the sight I got error, even if the function worked.
-It was confusing, but I had 2 html and JS script was calling from first page and didn´t got answer since that page didn´t have content JS was calling.
+  It was confusing, but I had 2 html and JS script was calling from first page and didn´t got answer since that page didn´t have content JS was calling.
 
 - The animation of dice was hard to get through, but the tutor lesson https://www.youtube.com/watch?v=XTF5jXDr2H8 helped me out of that one.
 
 - My functions stopped working without a reason.
-I realised the idea to change name of the repository wasnt that good, since it got errors on links etc.
-I changed back to the first name and it start worked again.
-Pitty, I got 3 different github pages and 2 of them has error 404, since they are not current any more.
+  I realised the idea to change name of the repository wasnt that good, since it got errors on links etc.
+  I changed back to the first name and it start worked again.
+  Pitty, I got 3 different github pages and 2 of them has error 404, since they are not current any more.
 ![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/5579bd95-2bfb-4f55-be24-c7ea9d620eff)
 
 
+## Testing
+
+### HTML Validator
+I have checked the HTML codes through https://validator.w3.org/
+
+![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/a378c126-ad07-4861-a338-8e00ad37bad1)
+
+
+### CSS Validator 
+I have checked css code through https://jigsaw.w3.org/css-validator/#validate_by_input
+![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/9fe4711b-9699-4092-9474-ce2f4c5e05af)
+
+I have checked JS codes through  
 ## Acknowledgements
 
 I have some imported people around me to hepled me out with PP2
+
 * Tutor Ernst from "Digitala lyftet", who has spent hours with me to explain and solved my problems.
 * My student fellow Josefin Yoshida-Dahlqvist, who always hold my hand and try to help me out.
 * CI Tutors 
