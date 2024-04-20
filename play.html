@@ -29,10 +29,10 @@
     <!--Header-->
     <header>
       <nav> 
-        <a href="index.html">
-       
-              <!-- navigation-->
-              <div> <a href= "index.html"> Back to menu</div></a></nav>
+                       <!-- navigation-->
+              <div> <a href= "index.html"> Back to menu</a>
+            </div>
+            </nav>
 
         <h1 class="heading">Bet the dice</h1>
          
@@ -40,7 +40,7 @@
         <h2>Pick a value:</h2>
         
         <hr>
-      
+      <div> 
           <img src="assets/image/euro10.png" alt="euro10" class="image" id="10">
           <img src="assets/image/euro50.png" alt="euro50" class="image" id = "50">
           <img src="assets/image/euro100.png" alt="euro100" class="image" id ="100">
@@ -49,12 +49,12 @@
             <hr>
     </header>
          
-    <section class="gamearea">
+    <div class="gamearea">
   
          <!--Players board too choose numners-->
    
     <p id="picknumber"> </p>
-
+    </div>
     <div id="board" class="button-container">
 <button aria-label="1" data-choice="0" class="control" value="1">1</button>
 <button aria-label="2" data-choice="1" class="control" value="2">2</button>
@@ -63,7 +63,7 @@
 <button aria-label="5" data-choice="4" class="control" value="5">5</button>
 <button aria-label="6" data-choice="5" class="control" value="6">6</button>
 </div>
-</section>
+
 
 <!-- click button to roll dice-->
 <div id="message" onclick="rollDice()">click here to roll dice</div>

@@ -313,7 +313,7 @@ video {
  
     body {
         background-color: aquamarine;
-        font-family:Bungee Spice;
+        font-family:"Bungee Spice";
        }
 
        h1 {
@@ -360,7 +360,7 @@ h2 {
   }
 
   #result {
-margin-top: 5%;
+margin-top: 10%;
 }
 
 /* button for play*/
