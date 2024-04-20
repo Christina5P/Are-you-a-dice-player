@@ -2,23 +2,23 @@
 
 "Bet a dice" is a game for a quick bet.
 If you like numbers, dicegame and bets, this is a simple game to play.
-<hr>
+
 You choose if you want to bet 10, 20 or 100 euro by click on the bill.
 The higher you bet, the more risk you take! 
 After your bet, you choose numbers regarding to your bet. If you bet 10 euro, you choose 3 numbers, for 50 euro you get 2 numbers and 100 euro you get 1 number.
-<hr>
+
 After you have bet and clicked on numbers, you click to roll a dice.
 The dice will show you the result and if you have the number in your choises, you win the bet. Otherwise you lose.
-<hr>
+
 The game is build with colours and animation to get it lively and fun.
-<hr>
+
 The idea is taken from the betwheel at the fairground.
-<hr
+
 ![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/411fbb65-f652-473f-8f3b-c92b3181af7f)
 
 ## Contents
 
-# Homepage
+### Homepage
 
 You start at homepage with instructions how to play and a playbutton to click. After click you go directed to the game.
 >br>
