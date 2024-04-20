@@ -137,6 +137,7 @@ I have checked css code through https://jigsaw.w3.org/css-validator/#validate_by
 ![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/9fe4711b-9699-4092-9474-ce2f4c5e05af)
 
 I have checked JS codes through  
+
 ## Acknowledgements
 
 I have some imported people around me to hepled me out with PP2
