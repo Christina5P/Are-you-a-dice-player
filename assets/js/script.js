@@ -34,7 +34,7 @@ messageElement.textContent = ""; // clear message "Roll Dice"
   
 
  
-
+// pick value from images
     function caches(event) {
       if (choicecounter < 1) {
         console.log("click cash");
@@ -67,7 +67,7 @@ function changeBoardColor(event) {
   }
 }
 
-//create the dice
+//create the dice dots position
 function createDice(number) {
   const dotPositionMatrix = {
     1: [
@@ -137,7 +137,7 @@ function rollDice() {
     diceContainer.appendChild(dice);
 
     
-//Start animation
+//Start animation of roll
 setTimeout(() => {
   dice.style.animation = 'roll 8s infinite linear';
 }, 100);
@@ -177,7 +177,7 @@ console.log("rollDice");
         }
       }
 
-          //function to compare playerchoice and diceroll to get true or false (help with this function from perplexity)
+//function to compare playerchoice and diceroll to get true or false (help with this function from perplexity)
 
 function rollDiceInternal() {
   const diceContainer = document.getElementById("diceContainer");
@@ -199,6 +199,7 @@ function changeBoardColor(event) {
     
       }  console.log(playerChoices);
 }
+
 // call the winner or loser video from result
 const messageElement = document.getElementById("result");
 const winnervideo = document.createElement("video");
