@@ -1,3 +1,11 @@
+  
+// button and function to restart the game  
+const playAgainBtn = document.getElementById("play");
+playAgainBtn.addEventListener('click', function () {
+playerChoices.length = 0; // empty choicers array
+messageElement.textContent = ""; // clear message "Roll Dice"
+   });
+
 // to get to numbers and count players choice of number
 const playElement = document.getElementById("message");
 let choicecounter = 0;
@@ -24,14 +32,27 @@ const cashes = document.querySelectorAll(".image");
       cash.addEventListener("click", caches);
     });
 
-    
-// button and function to restart the game  
-const playAgainBtn = document.getElementById("play");
-playAgainBtn.addEventListener('click', function () {
-playerChoices.length = 0; // empty choicers array
-messageElement.textContent = ""; // clear message "Roll Dice"
-   });
-  
+    const selectedImage = document.querySelector(".image.selected");
+    const picknumber = document.getElementById("picknumber")
+        console.log("pick number");
+
+    //text to descibe how many numbers you pick
+    function textContent() {
+          if (selectedImage) {
+        const picknumberElement = document.getElementById("picknumber");
+                if (selectedImage.id === "100") {
+          picknumberElement.textContent = "Pick 1 number";
+          console.log(textContent());
+        } else if (selectedImage.id === "50") {
+          picknumberElement.textContent = "Pick 2 numbers";
+          console.log(textContent());
+        } else if (selectedImage.id === "10") {
+          picknumberElement.textContent = "Pick 3 numbers";
+                console.log(textContent());
+       
+        }
+      }
+    }
 
  
 // pick value from images
@@ -56,8 +77,6 @@ buttons.forEach(button => {
   
 });
 
-
-
 // change colour of picked cards with number - 3 cards
 
  const playerChoices = [];
@@ -73,6 +92,7 @@ function changeBoardColor(event) {
       board.style.transition = ".5s ease";
       playerChoices.push(event.target.value);
       choicecounter++;
+
     } else if (selectedImage.id === "50" && choicecounter < 3) {
       console.log("click button");
       console.log(event.target.value);
@@ -280,5 +300,6 @@ function topFunction() {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera*/
 }
 }
+  
 
 
