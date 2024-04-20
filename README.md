@@ -69,10 +69,13 @@ When I tested the game on smaller screens as mobile and ipad, I saw the font won
 ![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/4b505aa9-ada0-4c8c-ac46-74bea8b80cf6)
 
 I have also create an own Head icon to use in head
-<hr>
-![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/8edbcdc8-6333-4547-a5b7-bb4ffa6381b5)
+![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/68263cd0-7c44-4f3a-851b-d2ef1c5609ae)
 
-I have also made a handpointer when you click on numbers.
+<hr>
+
+
+I made a handpointer when you click on numbers.
+
 ## Future Features to Implement
 
 Counter how many rolls you need to reach a specific value (/or for ex. 24 points).
@@ -106,6 +109,7 @@ The site was deployed to GitHub pages. The way I manage that:
 ## Bugs 
  Through this project I have notised bugs that has been very instructive for me.
  The biggest issues I had was:
+ 
 -The dots on the dice. It was hard to get them in possition and get them to stay inside the dice ;-)
  The resolution was to chenge the position od dots in css.
 
@@ -137,6 +141,13 @@ I have checked css code through https://jigsaw.w3.org/css-validator/#validate_by
 ![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/9fe4711b-9699-4092-9474-ce2f4c5e05af)
 
 I have checked JS codes through  
+
+### Lighthouse
+![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/fc09d58b-adc3-461d-9966-7042233d9250)
+
+### Wave
+![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/a03cacab-a626-4570-b396-f0c1e513bbf2)
+
 
 ## Acknowledgements
 
