@@ -212,26 +212,20 @@
                  default:
                    break;
            }
-   
-           
+             
  dice.style.animation = 'roll';
- 
  setTimeout(() => {
-  // Lägg till spelarens valt nummer till playerChoices
   playerChoices.push(event.target.value);
-  // Ditt befintliga kodblock för att visa resultatet och kontrollera vinnare/förlorare
-}, 3100);
+ }, 3100);
 }
-
-// Anropa rollDice när spelaren har valt alla sina nummer
+// help to call the numbers before rolling dice 
 if (choicecounter === playerChoices.length) {
 rollDice();
 }
  console.log("rollDice");
          }
        
- 
- //function to compare playerchoice and diceroll to get true or false (help with this function from perplexity)
+  //function to compare playerchoice and diceroll to get true or false (help with this function from perplexity)
  
  function rollDiceInternal() {
    const diceContainer = document.getElementById("diceContainer");
