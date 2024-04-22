@@ -47,19 +47,16 @@
           
    // Call textContent function here
    textContent(selectedImage);
-         }
- 
-    
-  
-        //text to descibe how many numbers you pick
+         };
+
+     //text to descibe how many numbers you pick
      function textContent(selectedImage) {
        var picknumberElement = document.getElementById("picknumber");
-        
-       console.log("picknumber2");
+              console.log("picknumber");
  
             if (selectedImage.id === "100") {
        picknumberElement.textContent = "Now you can pick 1 number";
-       console.log(textContent());
+
      } else if (selectedImage.id === "50") {
        picknumberElement.textContent = "Now you can pick 2 numbers";
        console.log(textContent());
@@ -67,7 +64,7 @@
        picknumberElement.textContent = "Now you can pick 3 numbers";
              console.log(textContent());
         }
-   }
+   };
  
  
  // Players choice of number 

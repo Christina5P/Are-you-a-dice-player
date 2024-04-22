@@ -6,9 +6,9 @@
 
 
  body {
-    background-color: rgb(88, 80, 80);
-    font-family: 'Honk', "Raleway", sans-serif;
-    font-size: 40px;
+    background-color:#385e5f;
+    font-family: 'nabla', "Raleway", sans-serif;
+    font-size: 1.5rem;
     text-align: center;
  }
 
@@ -21,7 +21,7 @@ header {
 
      /* container for pictures of euro*/
      .image-container {
-        font-size: xx-large;
+        font-size: 1.5rem;
         display: flex;
         justify-content: center;
         gap: 20px; 
@@ -40,13 +40,13 @@ header {
       }
 
 a{
-    font-size: 1.5em;
+    font-size: 1em;
 }
 
 h1{
-    font-size: 2em;
+    font-size: 1em;
     text-align: center;
-    background-color: rgb(139, 127, 127);
+    background-color:cadetblue;
     padding-block: 5%;
     width: 100%;
     height:auto;
@@ -54,7 +54,7 @@ h1{
 }
 
 h2 {
-    font-size: 3rem;
+    font-size: 1.5rem;
 }
 
 .rules {
@@ -79,7 +79,7 @@ footer {
 
 /* players board with numberchoice*/
 #board {
-width: fit-content;
+width: -webkit-fill-available;
 height: fit-content;
 background: url(../image/background.png) ;
 background-size: 100%;
@@ -327,7 +327,7 @@ video {
     }
 
 .rules {
-    font-size: 2rem;
+    font-size: 1rem;
       font-style: normal;
 }
 }
@@ -335,7 +335,7 @@ video {
 @media screen and (min-width: 804px)  {
   
 h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 .rules {
     font-size: 2rem;
@@ -360,7 +360,7 @@ h2 {
   }
 
   #result {
-margin-top: 10%;
+margin-top: 20%;
 }
 
 /* button for play*/
