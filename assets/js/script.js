@@ -177,6 +177,7 @@
      const dice = createDice(randomNumber);
      diceContainer.innerHTML = "";
      diceContainer.appendChild(dice);
+     
  
      
  //Start animation of roll
@@ -215,9 +216,20 @@
            
  dice.style.animation = 'roll';
  
+ setTimeout(() => {
+  // Lägg till spelarens valt nummer till playerChoices
+  playerChoices.push(event.target.value);
+  // Ditt befintliga kodblock för att visa resultatet och kontrollera vinnare/förlorare
+}, 3100);
+}
+
+// Anropa rollDice när spelaren har valt alla sina nummer
+if (choicecounter === playerChoices.length) {
+rollDice();
+}
  console.log("rollDice");
          }
-       }
+       
  
  //function to compare playerchoice and diceroll to get true or false (help with this function from perplexity)
  
