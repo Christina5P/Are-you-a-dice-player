@@ -54,20 +54,26 @@ h1{
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
+    text-align: center;
+}
+p{
+    text-align: center;
+    margin-top: 5%;
 }
 
 .rules {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-style: oblique;
+    text-align: left;
 }
 
 /* copyright log*/
 footer {
     margin-top: 35%;
     font-family: 'Courier New', Courier, monospace;
-    font-size: small;
-    color: aliceblue;
+    font-size: medium;
+    color: black;
     }
 
 /* button for play*/
@@ -85,7 +91,6 @@ background: url(../image/background.png) ;
 background-size: 100%;
 padding: 20px; 
 display: inline-block;
-border-radius: 10%;
 }
 
   /* buttons placement in #board*/
@@ -104,7 +109,7 @@ button {
     margin: 20%;
 }
 
-button:hover {
+.dice:hover {
     cursor: pointer;
 }
 
@@ -114,9 +119,10 @@ button:hover {
  font-size: 1rem;
 
 }
+/*
 #message:hover {
     cursor: pointer;
-}
+}*/
 
 
 #dice-container {
@@ -329,15 +335,33 @@ video {
     font-size: 1rem;
       font-style: normal;
 }
+#result {
+    margin-top: 20%;
+}
 }
 
-@media screen and (min-width: 804px)  {
-  
-h2 {
-    font-size: 2rem;
+@media screen and (min-width: 769px) and (min-width: 1300px) {
+      body{
+        font-size: 2rem;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    .image-container {
+    font-size: 2.5rem;
 }
+    h2{
+font-size: 3rem;
+    }
+    .image {
+      font-size: 13rem;
+    }
+
+    p {
+     font-size: 2rem;
+    }
 .rules {
-    font-size: 2rem;
+    font-size: 3rem;
     font-style: oblique;
 }
 
@@ -368,5 +392,4 @@ margin-top: 20%;
     height: fit-content;
      border-radius: 10%;
 }
-
 }
