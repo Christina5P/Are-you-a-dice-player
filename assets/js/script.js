@@ -1,245 +1,132 @@
- // button and function to restart the game  
+ /* button and function to restart the game  
  const playAgainBtn = document.getElementById("play");
- playAgainBtn.addEventListener('click', function () {
- playerChoices.length = 0; // empty choicers array
- messageElement.textContent = ""; // clear message "Roll Dice"
+
+ PlayAgainBtn.addEventListener('click', startNewGame);*/
+   
+ //Börjar här
+ const allImages = document.querySelectorAll(".image"); // Alla bilder som spelaren kan välja (value)
+const betScore = document.getElementById("bet-score"); //to call elements for cash
+const value = ["10", "50", "100",];   
+const picknumberElement = document.getElementById("picknumber"); // picked value 
+const playElement = document.getElementById("message");//message to click on dice
+const buttons = document.querySelectorAll(".control"); //1-6 buttons in board
+const myPlayBtn = document.getElementById("play");
+const resetButton = document.getElementById("resetButton");
+
+//const playerScore = document.getElementById("player-score");
+let playerChoices = []; 
+let choicecounter = 0;
+
+//const messageElement = document.getElementById("message");
+const message = document.getElementById("message");
+
+console.log("DOM-innehållet har laddats");
+
+//above is just variabels
+ 
+myPlayBtn.addEventListener('click', startNewGame);
+
+console.log("Play-knapp:", myPlayBtn);
+
+function startNewGame() {
+    playerChoices.length = 0; // Clear the playerChoices array
+    choicecounter = 0;
+    cashes = null;
+   
+    allImages.forEach(image => {
+      image.classList.remove("selected"); // Iterate through all images and remove the "selected" class
     });
- 
- // to get to numbers and count players choice of number
- const playElement = document.getElementById("message");
- let choicecounter = 0;
- let allImages = document.querySelectorAll(".image");
- 
- // To roll the dice just once time 
- const myPlayBtn = document.getElementById("play");
- myPlayBtn.addEventListener('click', function () {
-   message.textContent = "click on the dice to roll it";
-   choicecounter = 0;
-   buttons.forEach(button => {
-   button.style.backgroundColor = "#000000";
-   });
- });
- 
- 
- // Players bet of value 
- const betScore = document.getElementById("bet-score");
- const value = ["10", "50", "100",];   
- const cashes = document.querySelectorAll(".image");
-   
-    // keep picked value in a box
-     cashes.forEach(cash => {
-       cash.addEventListener("click", caches);
-           });
-  
-    
- // pick value from images
-     function caches(event) {
-       if (choicecounter < 1) {
-         console.log("click cash");
-         document.querySelectorAll(".image").forEach(img => img.classList.add("hidden"));
-         event.target.classList.remove("hidden");
-        event.target.classList.add("selected");
-         choicecounter++;         
-       }    console.log(event.target);
-   
-         const selectedImage = document.querySelector(".image.selected");
-          console.log(selectedImage);
-          
-   // Call textContent function here
-   textContent(selectedImage);
-         };
+     buttons.forEach(button => {
+    button.style.backgroundColor = "#000000";  // Reset the button colors
+    });
+     message.textContent = "Click on the dice to roll it";   // Clear any previous message
+  }
 
-     //text to descibe how many numbers you pick
-     function textContent(selectedImage) {
-       var picknumberElement = document.getElementById("picknumber");
-              console.log("picknumber");
- 
+    document.querySelectorAll(".image")
+
+     // Lyssna på klick för varje bild och spara den valda bilden
+     allImages.forEach(image => {
+        image.addEventListener("click", function(event) {
+           
+            // Dölj alla bilder (värden) och visa vald bild
+            allImages.forEach(img => {
+                img.classList.add("hidden");
+                img.classList.remove("selected");
+            });
+    
+              
+                // Visa den valda bilden och markera den som vald
+            image.classList.remove("hidden");
+            image.classList.add("selected");
+
+            const selectedImage = image;
+            console.log(selectedImage);           
+            let textContent = selectedImage;
+
+        if (selectedImage) {
+           
             if (selectedImage.id === "100") {
-       picknumberElement.textContent = "Now you can pick 1 number";
-
-     } else if (selectedImage.id === "50") {
-       picknumberElement.textContent = "Now you can pick 2 numbers";
-       console.log(textContent());
-     } else if (selectedImage.id === "10") {
-       picknumberElement.textContent = "Now you can pick 3 numbers";
-             console.log(textContent());
-        }
-   };
- 
- 
- // Players choice of number 
- const playerScore = document.getElementById("player-score");
- const choice = ["1", "2", "3", "4", "5", "6"];   
- const buttons = document.querySelectorAll(".control");
- buttons.forEach(button => {
-   button.addEventListener("click", changeBoardColor);
-   
- });
- 
- // change colour of picked cards with number - 3 cards
- 
-  const playerChoices = [];
- 
- function changeBoardColor(event) {
-   let selectedImage = document.querySelector(".image.selected");
-   if (selectedImage) {
- 
-     if (selectedImage.id === "100" && choicecounter < 2) {
-       console.log("click button");
-       console.log(event.target.value);
-       event.target.style.backgroundColor = "#FFFFFF";
-       board.style.transition = ".5s ease";
-       playerChoices.push(event.target.value);
-       choicecounter++;
- 
-     } else if (selectedImage.id === "50" && choicecounter < 3) {
-       console.log("click button");
-       console.log(event.target.value);
-       event.target.style.backgroundColor = "#FFFFFF";
-       board.style.transition = ".5s ease";
-       playerChoices.push(event.target.value);
-       choicecounter++;
-     } else if (selectedImage.id === "10" && choicecounter < 4) {
-       console.log("click button");
-       console.log(event.target.value);
-       event.target.style.backgroundColor = "#FFFFFF";
-       board.style.transition = ".5s ease";
-       playerChoices.push(event.target.value);
-       choicecounter++;
-     }
-   }
- }
- //create the dice dots position
- function createDice(number) {
-   const dotPositionMatrix = {
-     1: [
-       [50, 50]
-     ],
-     2: [
-       [20, 20],
-       [80, 80]
-     ],
-     3: [
-       [20, 20],
-       [50, 50],
-       [80, 80]
-     ],
-     4: [
-       [20, 20],
-       [20, 80],
-       [80, 20],
-       [80, 80]
-     ],
-     5: [
-       [20, 20],
-       [20, 80],
-       [50, 50],
-       [80, 20],
-       [80, 80]
-     ],
-     6: [
-       [20, 20],
-       [20, 80],
-       [50, 20],
-       [50, 80],
-       [80, 20],
-       [80, 80]
-     ]
-   };
-   const dice = document.createElement("div");
-   dice.classList.add("dice");
-   for (const dotPosition of dotPositionMatrix[number]) {
-     const dot = document.createElement("span");
-     // create the dots on dice 
-     dot.classList.add("dice-dot");
-     dot.style.setProperty("--top", dotPosition[0] + "%");
-     dot.style.setProperty("--left", dotPosition[1] + "%");
-     dice.appendChild(dot);
-   }
-   return dice;
- }
- 
- let diceContainer = document.getElementById("diceContainer");
- //diceContainer.innerHTML = "" ;
- const dice = createDice(6);
- diceContainer.appendChild(dice);
- dice.style.animation = 'none';
- 
- 
- // roll Dice with dots 
- function rollDice() {
-   if (message.textContent == "click on the dice to roll it") {
-     let diceContainer = document.getElementById("diceContainer");
-     let diceSpans = diceContainer.querySelectorAll("span");
- 
-    
-     const randomNumber = Math.floor(Math.random() * 6) + 1;
-     const dice = createDice(randomNumber);
-     diceContainer.innerHTML = "";
-     diceContainer.appendChild(dice);
-     
- 
-     
- //Start animation of roll
- setTimeout(() => {
-   dice.style.animation = 'roll 8s infinite linear';
- }, 100);
- 
-  setTimeout(() => {
-   diceSpans.forEach(span => span.classList.remove("roll"));
-   const correctNumber = rollDiceInternal(); // call function rollDiceInternal() to keep result in correctNumber
-   checkAnswer(correctNumber);
- }, 3100);
-      switch (randomNumber) {
-               case 1:
-                   dice.style.transform = 'rotateX(0deg) rotateY(0deg)';
-                   break;
-                 case 6:
-                   dice.style.transform = 'rotateX(180deg) rotateY(0deg)';
-                   break;
-                 case 2:
-                   dice.style.transform = 'rotateX(-90deg) rotateY(0deg)';
-                   break;
-                 case 5:
-                   dice.style.transform = 'rotateX(90deg) rotateY(0deg)';
-                   break;
-                 case 3:
-                   dice.style.transform = 'rotateX(0deg) rotateY(90deg)';
-                   break;
-                 case 4:
-                   dice.style.transform = 'rotateX(0deg) rotateY(-90deg)';
-                   break;
-                 default:
-                   break;
-           }
-             
- dice.style.animation = 'roll';
- setTimeout(() => {
-  playerChoices.push(event.target.value);
- }, 3100);
-}
-// help to call the numbers before rolling dice 
-if (choicecounter === playerChoices.length) {
-rollDice();
-}
- console.log("rollDice");
-         }
+                maxChoices = 1;
+                picknumberElement.textContent = "Now you can pick 1 number";
        
-  //function to compare playerchoice and diceroll to get true or false (help with this function from perplexity)
- 
- function rollDiceInternal() {
-   const diceContainer = document.getElementById("diceContainer");
-   const diceSpans = diceContainer.querySelectorAll("span");
-   const numberOfRolls = diceSpans.length;
-   const randomNumber = Math.floor(Math.random() * numberOfRolls) + 1;
-   diceContainer.innerHTML = ""; // clear dots to new roll
-   const dice = createDice(randomNumber);
-   diceContainer.appendChild(dice);
-      message.textContent = "dice rolled: ";
-      return randomNumber;
- }
-     
+            } else if (selectedImage.id === "50") {
+                maxChoices = 2;
+                picknumberElement.textContent = "Now you can pick 2 numbers";
+              
+            } else if (selectedImage.id === "10") {
+                maxChoices = 3;
+                picknumberElement.textContent = "Now you can pick 3 numbers";
+                         }
+                        }
+                    });
+                });
+                let maxChoices = 0;
+
+                buttons.forEach(button => {
+                button.addEventListener("click", function() {
+                changeBoardColor(event, maxChoices);
+            });
+        });   
+            
+        function changeBoardColor(event, maxChoices) {                
+        if (choicecounter < maxChoices) {
+        // change the backgroundcolor when click on number
+         event.target.style.backgroundColor = "#FFFFFF"; 
+         playerChoices.push(event.target.value); 
+         choicecounter++; 
+
+         console.log(playerChoices);
+        }
+    }    
     
+     // Anropa rollDice när spelaren har valt alla sina nummer
+function rollDice() {
+if (message.textContent == "click on the dice to roll it") {
+
+    console.log(rollDice);
+
+    const diceContainer = document.getElementById("diceContainer");
+    const diceSpans = diceContainer.querySelectorAll("span");
+    const numberOfRolls = diceSpans.length;
+
+    const randomNumber = Math.floor(Math.random() * numberOfRolls) + 1;
+
+    diceContainer.innerHTML = "";
+    const dice = createDice(randomNumber);
+    diceContainer.appendChild(dice);
+
+    message.textContent = "dice rolled: ";
+        
+    // Returnera det slumpmässiga numret för eventuell användning
+    return randomNumber; 
+    }
+    if (randomNumber === playerChoice) {
+        console.log("Grattis, ditt val matchade det slumpmässiga numret!");
+    } else {
+        console.log("Tyvärr, ditt val matchade inte det slumpmässiga numret.");
+    }
+}
+       
  // call the winner or loser video from result
  const messageElement = document.getElementById("result");
  const winnervideo = document.createElement("video");
@@ -254,55 +141,58 @@ rollDice();
  loservideo.type = "video/mp4";
  loservideo.autoplay = true;
  loservideo.muted = true;
- 
+  
  //function to check playerschoice and give result and video
- function checkAnswer(correctNumber) {
-   const selectedImage = document.querySelector(".image.selected");
-   
-   if (selectedImage) {
-  if (playerChoices.includes(correctNumber.toString()))  {
-    switch (selectedImage.id) {
-     case "10":
-       messageElement.textContent = "You won 10 euros!";
-       break;
-     case "50":
-       messageElement.textContent = "You won 50 euros!";
-       break;
-     case "100":
-       messageElement.textContent = "You won 100 euros!";
-       break;
-       default:
-         messageElement.textContent = "You won!";
-     }
-     messageElement.appendChild(winnervideo);
-     winnervideo.autoplay = true;
-     console.log(winnervideo.autoplay);
+ function checkAnswer(randomNumber) {
+    const selectedImage = document.querySelector(".image.selected");
+    
+    if (selectedImage) {
+   if (playerChoices.includes(randomNumber.toString()))  {
+     switch (selectedImage.id) {
+      case "10":
+        messageElement.textContent = "You won 10 euros!";
+        break;
+      case "50":
+        messageElement.textContent = "You won 50 euros!";
+        break;
+      case "100":
+        messageElement.textContent = "You won 100 euros!";
+        break;
+        default:
+          messageElement.textContent = "You won!";
+      }
+      messageElement.appendChild(winnervideo);
+      winnervideo.autoplay = true;
+      console.log(winnervideo.autoplay);
+  
+    }   else {
+    messageElement.textContent = "You lost";
+    messageElement.appendChild(loservideo);
+    
+    console.log("correct number", randomNumber);
+    console.log(playerChoices);
+    console.log(selectedImage);
+    console.log(loservideo.autoplay);
+    }
+  }
  
-   }   else {
-   messageElement.textContent = "You lost";
-   messageElement.appendChild(loservideo);
-   
-   console.log("correctnumber", correctNumber);
-   console.log(playerChoices);
-   console.log(selectedImage);
-   console.log(loservideo.autoplay);
-   }
+  console.log(randomNumber)
  }
- 
- // replace all values when play again
- myPlayBtn.addEventListener("click", function() {
-   allImages.forEach(img => {
-     img.classList.remove("hidden");
-     img.classList.remove("selected");
-     console.log(allImages.remove);
-   });
- });
- 
- // move back to top when clicking "play-again" button
- playAgainBtn.addEventListener("click", topFunction);
- function topFunction() {
-    document.body.scrollTop = 0; // For Safari
-   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera*/
- }
- }  
- 
+  
+ /*
+ function resetDice() {
+    diceContainer.innerHTML = "";
+    const randomNumber = Math.floor(Math.random() * 6) + 1;
+    const dice = createDice(randomNumber);
+    diceContainer.appendChild(dice);
+    dice.style.animation = 'roll 8s infinite linear';
+    playerChoices.length = 0;
+    messageElement.textContent = ""; //clear msg "dice rolled" before a new game 
+}
+
+resetButton.addEventListener ("click", resetDice);
+resetDice();*/
+
+        //move back to top when you click "playagain" button
+        document.body.scrollTop = 0;  // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera*/
