@@ -30,6 +30,7 @@ function createDice(randomNumber) {
   }
 
   return dice;
+ 
 }
  dice = createDice(randomNumber);
  diceContainer.appendChild(dice);
@@ -41,6 +42,7 @@ function createDice(randomNumber) {
     setTimeout(() => {
       playerChoices.push(randomNumber);
       checkAnswer(randomNumber);
+      dice.style.animation = '';
       }, 4000); // dice rolls in 4 seconds
 });
           //for animation-switch the dots sides in case of the randomnumber

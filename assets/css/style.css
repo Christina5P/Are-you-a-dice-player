@@ -113,12 +113,14 @@ button {
     cursor: pointer;
 }
 
-/* click to roll dice button*/
+
+  
+/* click to roll dice button
 #message {
     margin: 5%;
  font-size: 1rem;
 
-}
+}*/
 /*
 #message:hover {
     cursor: pointer;
@@ -145,6 +147,7 @@ button {
     border-radius: 10px;
     font-family:sans-serif;
     position: absolute;
+    animation: roll 8s infinite linear;
    }
 
 @keyframes roll {

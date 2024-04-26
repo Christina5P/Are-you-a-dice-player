@@ -94,33 +94,8 @@ function startNewGame() {
 
          console.log(playerChoices);
         }    
+      }
 
-
- // roll Dice with dots 
- function rollDice() {
-  if (message.textContent == "click on the dice to roll it") {
-    let diceContainer = document.getElementById("diceContainer");
-    let diceSpans = diceContainer.querySelectorAll("span");
-    let numberOfRolls = diceSpans.length;
-    let randomNumber = Math.floor(Math.random() * numberOfRolls) + 1;
-    let dice = createDice(randomNumber);
-    diceContainer.innerHTML = "";
-    diceContainer.appendChild(dice);
-    message.textContent = "dice rolled: ";
-    return randomNumber
-  }
-    
-    setTimeout(() => {
-      diceSpans.forEach(span => span.classList.remove("roll"));
-    const correctNumber = rollDiceInternal(); // call function rollDiceInternal() to keep result in correctNumber
-      checkAnswer(correctNumber);
-      return randomNumber
-    }, 4000);
-   
-         };
-    }
-  
-  
   
    // call the winner or loser video from result
  let messageElement = document.getElementById("result");
