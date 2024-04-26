@@ -1,7 +1,7 @@
- const diceContainer = document.getElementById("diceContainer") //call dicecontainer from HTML to create dice in
- const diceSpans = diceContainer.querySelectorAll("span");  //js creates spans for numbers
- const numberOfRolls = diceSpans.length;
- const randomNumber = Math.floor(Math.random() * numberOfRolls) + 1;
+ let diceContainer = document.getElementById("diceContainer") //call dicecontainer from HTML to create dice in
+ let diceSpans = diceContainer.querySelectorAll("span");  //js creates spans for numbers
+ let numberOfRolls = diceSpans.length;
+ let randomNumber = Math.floor(Math.random() * numberOfRolls) + 1;
 
 diceContainer.innerHTML = "" ; // empty the dicecontainer to next game
 
@@ -9,7 +9,7 @@ try {
   
 //create the dots position on dice:(innan var det bara number i parentes)
 function createDice(randomNumber) {
-  const dotPositionMatrix = {
+  let dotPositionMatrix = {
     1: [[50, 50]],
     2: [[20, 20], [80, 80]],
     3: [[20, 20], [50, 50], [80, 80]],
@@ -18,11 +18,11 @@ function createDice(randomNumber) {
     6: [[20, 20], [20, 80], [50, 20], [50, 80], [80, 20], [80, 80]]
   };
 
-  const dice = document.createElement("div");
+  let dice = document.createElement("div");
   dice.classList.add("dice");
 
-  for (const dotPosition of dotPositionMatrix[randomNumber]) {
-    const dot = document.createElement("span");
+  for (let dotPosition of dotPositionMatrix[randomNumber]) {
+    let dot = document.createElement("span");
     dot.classList.add("dice-dot");
     dot.style.setProperty("--top", dotPosition[0] + "%");
     dot.style.setProperty("--left", dotPosition[1] + "%");
@@ -35,13 +35,13 @@ function createDice(randomNumber) {
  diceContainer.appendChild(dice);
  //dice.style.animation = rollDice();
  
-  // Laddventlistener to start roll dice
+   //addventlistener to start roll dice
   dice.addEventListener('click', function() {
     dice.style.animation = 'roll 8s infinite linear';   //Start animation of roll
     setTimeout(() => {
       playerChoices.push(randomNumber);
       checkAnswer(randomNumber);
-      }, 8000); // dice rolls in 8 seconds
+      }, 4000); // dice rolls in 4 seconds
 });
           //for animation-switch the dots sides in case of the randomnumber
    if(dice){   

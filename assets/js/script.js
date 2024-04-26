@@ -1,15 +1,19 @@
-const playAgainBtn = document.getElementById("play");
+let playAgainBtn = document.getElementById("play");
 playAgainBtn.addEventListener('click', function () {
 playerChoices.length = 0; // empty choicers array
 //messageElement.textContent = ""; // clear message "Roll Dice"
    });
+ //move back to top when you click "playagain" button
+  document.body.scrollTop = 0;  // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera*/
+
 
    //Variabels
 const allImages = document.querySelectorAll(".image"); // 3 value.img to pick from
 const betScore = document.getElementById("bet-score"); //to call elements for cash
 const value = ["10", "50", "100",];   
-const picknumberElement = document.getElementById("picknumber"); // picked value 
-const playElement = document.getElementById("message");//message to click on dice
+let picknumberElement = document.getElementById("picknumber"); // picked value 
+let playElement = document.getElementById("message");//message to click on dice
 const buttons = document.querySelectorAll(".control"); //1-6 numbersbuttons in board to pick from
 //const resetButton = document.getElementById("resetButton");
 
@@ -17,7 +21,7 @@ const playerScore = document.getElementById("player-score");
 let playerChoices = []; //to start with
 let choicecounter = 0; //to start with
 
-const message = document.getElementById("message");
+let message = document.getElementById("message");
 
 console.log("DOM is loaded");
 
@@ -50,7 +54,7 @@ function startNewGame() {
             image.classList.remove("hidden");
             image.classList.add("selected");
 
-            const selectedImage = image;
+            let selectedImage = image;
             console.log(selectedImage);           
             let textContent = selectedImage;
 
@@ -95,26 +99,25 @@ function startNewGame() {
   if (message.textContent == "click on the dice to roll it") {
     let diceContainer = document.getElementById("diceContainer");
     let diceSpans = diceContainer.querySelectorAll("span");
-    const randomNumber = Math.floor(Math.random() * 6) + 1;
-    const dice = createDice(randomNumber);
+    let randomNumber = Math.floor(Math.random() * 6) + 1;
+    let dice = createDice(randomNumber);
     diceContainer.innerHTML = "";
     diceContainer.appendChild(dice);
     setTimeout(() => {
-      dice.style.animation = 'roll 8s infinite linear';
+      dice.style.animation = 'roll 4s infinite linear';
     }, 100);
     
-     setTimeout(() => {
+    setTimeout(() => {
       diceSpans.forEach(span => span.classList.remove("roll"));
-      const correctNumber = rollDiceInternal(); // call function rollDiceInternal() to keep result in correctNumber
+    // const correctNumber = rollDiceInternal(); // call function rollDiceInternal() to keep result in correctNumber
       checkAnswer(correctNumber);
-     });
+    }, 4000);
+         };
     }
   }
-}
-
   
    // call the winner or loser video from result
- const messageElement = document.getElementById("result");
+ let messageElement = document.getElementById("result");
  const winnervideo = document.createElement("video");
  const loservideo = document.createElement("video");
  winnervideo.src = "assets/image/win.mp4";
@@ -130,7 +133,7 @@ function startNewGame() {
   
  //function to check playerschoice and give result and video
  function checkAnswer(randomNumber) {
-    const selectedImage = document.querySelector(".image.selected");
+    let selectedImage = document.querySelector(".image.selected");
     
     if (selectedImage) {
    if (playerChoices.includes(randomNumber.toString()))  {
@@ -164,21 +167,15 @@ function startNewGame() {
  
   console.log(randomNumber)
  }
+
   
- /*
+ 
  function resetDice() {
     diceContainer.innerHTML = "";
-    const randomNumber = Math.floor(Math.random() * 6) + 1;
-    const dice = createDice(randomNumber);
+    let randomNumber = Math.floor(Math.random() * 6) + 1;
+    let dice = createDice(randomNumber);
     diceContainer.appendChild(dice);
     dice.style.animation = 'roll 8s infinite linear';
     playerChoices.length = 0;
     messageElement.textContent = ""; //clear msg "dice rolled" before a new game 
 }
-
-resetButton.addEventListener ("click", resetDice);
-resetDice();*/
-
-        //move back to top when you click "playagain" button
-        document.body.scrollTop = 0;  // For Safari
-        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera*/
