@@ -1,12 +1,10 @@
 //dice.style.animation = 'none';
 
- //call dicecontainer from HTML to create dice in
- const diceContainer = document.getElementById("diceContainer")
  
- const diceSpans = diceContainer.querySelectorAll("span");
+ const diceContainer = document.getElementById("diceContainer") //call dicecontainer from HTML to create dice in
+ const diceSpans = diceContainer.querySelectorAll("span");  //js creates spans for numbers
  const numberOfRolls = diceSpans.length;
  const randomNumber = Math.floor(Math.random() * numberOfRolls) + 1;
-
 
 diceContainer.innerHTML = "" ; // empty the dicecontainer to next game
 
@@ -41,13 +39,13 @@ const dice = createDice(randomNumber);
  diceContainer.appendChild(dice);
  dice.style.animation = rollDice();
  
-  // Lägg till en klickhändelselyssnare på tärningen
+  // Laddventlistener to start roll dice
   dice.addEventListener('click', function() {
     dice.style.animation = 'roll 8s infinite linear';   //Start animation of roll
     setTimeout(() => {
       playerChoices.push(randomNumber);
       checkAnswer(randomNumber);
-      }, 8000); // 8 sekunder är längden på animationen
+      }, 8000); // dice rolls in 8 seconds
 });
           //for animation-switch the dots sides in case of the randomnumber
    if(dice){   

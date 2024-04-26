@@ -4,24 +4,22 @@ playerChoices.length = 0; // empty choicers array
 //messageElement.textContent = ""; // clear message "Roll Dice"
    });
 
-const allImages = document.querySelectorAll(".image"); // Alla bilder som spelaren kan välja (value)
+   //Variabels
+const allImages = document.querySelectorAll(".image"); // 3 value.img to pick from
 const betScore = document.getElementById("bet-score"); //to call elements for cash
 const value = ["10", "50", "100",];   
 const picknumberElement = document.getElementById("picknumber"); // picked value 
 const playElement = document.getElementById("message");//message to click on dice
-const buttons = document.querySelectorAll(".control"); //1-6 buttons in board
+const buttons = document.querySelectorAll(".control"); //1-6 numbersbuttons in board to pick from
 //const resetButton = document.getElementById("resetButton");
 
-const playerScore = document.getElementById("player-score");
-let playerChoices = []; 
-let choicecounter = 0;
+const playerScore = document.getElementById("player-score"); 
+let playerChoices = []; //to start with
+let choicecounter = 0; //to start with
 
 const message = document.getElementById("message");
 
-console.log("DOM-innehållet har laddats");
-
-//above is just variabels
- 
+console.log("DOM is loaded");
 
 function startNewGame() {
     playerChoices.length = 0; // Clear the playerChoices array
@@ -36,21 +34,19 @@ function startNewGame() {
     });
      message.textContent = "Click on the dice to roll it";   // Clear any previous message
   }
-
     document.querySelectorAll(".image")
 
-     // Lyssna på klick för varje bild och spara den valda bilden
+     // Listener click to save pick img
      allImages.forEach(image => {
         image.addEventListener("click", function(event) {
            
-            // Dölj alla bilder (värden) och visa vald bild
+            // Show picked img and hide the other
             allImages.forEach(img => {
                 img.classList.add("hidden");
                 img.classList.remove("selected");
             });
     
-              
-                // Visa den valda bilden och markera den som vald
+              // mark the picked img
             image.classList.remove("hidden");
             image.classList.add("selected");
 
@@ -58,6 +54,7 @@ function startNewGame() {
             console.log(selectedImage);           
             let textContent = selectedImage;
 
+            // to call text-instructions how may number to pick
         if (selectedImage) {
            
             if (selectedImage.id === "100") {
@@ -94,13 +91,14 @@ function startNewGame() {
         }
     }    
    
-// Anropa rollDice() när spelaren har valt alla sina nummer
+// call rollDice() when player picked number
 if (choicecounter === playerChoices.length) {
     const dice = createDice(randomNumber);
     diceContainer.appendChild(dice);
     rollDice();
 }
 
+// Roll dice
 try{
 function rollDice() {
     if (message.textContent === "click on the dice to roll it") {
@@ -119,13 +117,12 @@ function rollDice() {
     }
 }
 
-         
+        
 } catch (error) {
     console.error('Ett fel inträffade:', error);
   }
 
-       
- // call the winner or loser video from result
+   // call the winner or loser video from result
  const messageElement = document.getElementById("result");
  const winnervideo = document.createElement("video");
  const loservideo = document.createElement("video");
