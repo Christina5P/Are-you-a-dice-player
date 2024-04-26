@@ -88,17 +88,18 @@ function startNewGame() {
          choicecounter++; 
 
          console.log(playerChoices);
-        }
-    }    
-   
+        }    
 // call rollDice() when player picked number
 if (choicecounter === playerChoices.length) {
     const dice = createDice(randomNumber);
     diceContainer.appendChild(dice);
     rollDice();
 }
+        }
 
 // Roll dice
+let dice
+
 try{
 function rollDice() {
     if (message.textContent === "click on the dice to roll it") {
@@ -174,7 +175,7 @@ function rollDice() {
   console.log(randomNumber)
  }
   
- 
+ /*
  function resetDice() {
     diceContainer.innerHTML = "";
     const randomNumber = Math.floor(Math.random() * 6) + 1;
@@ -186,7 +187,7 @@ function rollDice() {
 }
 
 resetButton.addEventListener ("click", resetDice);
-resetDice();
+resetDice();*/
 
         //move back to top when you click "playagain" button
         document.body.scrollTop = 0;  // For Safari

@@ -1,6 +1,3 @@
-//dice.style.animation = 'none';
-
- 
  const diceContainer = document.getElementById("diceContainer") //call dicecontainer from HTML to create dice in
  const diceSpans = diceContainer.querySelectorAll("span");  //js creates spans for numbers
  const numberOfRolls = diceSpans.length;
