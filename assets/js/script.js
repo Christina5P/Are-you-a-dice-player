@@ -94,27 +94,32 @@ function startNewGame() {
          console.log(playerChoices);
         }    
 
+
  // roll Dice with dots 
  function rollDice() {
   if (message.textContent == "click on the dice to roll it") {
     let diceContainer = document.getElementById("diceContainer");
     let diceSpans = diceContainer.querySelectorAll("span");
-    let randomNumber = Math.floor(Math.random() * 6) + 1;
+    let numberOfRolls = diceSpans.length;
+    let randomNumber = Math.floor(Math.random() * numberOfRolls) + 1;
     let dice = createDice(randomNumber);
     diceContainer.innerHTML = "";
     diceContainer.appendChild(dice);
-    setTimeout(() => {
-      dice.style.animation = 'roll 4s infinite linear';
-    }, 100);
+    message.textContent = "dice rolled: ";
+    return randomNumber
+  }
     
     setTimeout(() => {
       diceSpans.forEach(span => span.classList.remove("roll"));
-    // const correctNumber = rollDiceInternal(); // call function rollDiceInternal() to keep result in correctNumber
+    const correctNumber = rollDiceInternal(); // call function rollDiceInternal() to keep result in correctNumber
       checkAnswer(correctNumber);
+      return randomNumber
     }, 4000);
+   
          };
     }
-  }
+  
+  
   
    // call the winner or loser video from result
  let messageElement = document.getElementById("result");
@@ -133,6 +138,7 @@ function startNewGame() {
   
  //function to check playerschoice and give result and video
  function checkAnswer(randomNumber) {
+ 
     let selectedImage = document.querySelector(".image.selected");
     
     if (selectedImage) {
