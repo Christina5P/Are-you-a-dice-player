@@ -5,7 +5,6 @@
 
 diceContainer.innerHTML = "" ; // empty the dicecontainer to next game
 
-let dice;
 try {
   
 //create the dots position on dice:(innan var det bara number i parentes)
@@ -32,9 +31,9 @@ function createDice(randomNumber) {
 
   return dice;
 }
-const dice = createDice(randomNumber);
+ dice = createDice(randomNumber);
  diceContainer.appendChild(dice);
- dice.style.animation = rollDice();
+ //dice.style.animation = rollDice();
  
   // Laddventlistener to start roll dice
   dice.addEventListener('click', function() {

@@ -89,40 +89,30 @@ function startNewGame() {
 
          console.log(playerChoices);
         }    
-// call rollDice() when player picked number
-if (choicecounter === playerChoices.length) {
+
+ // roll Dice with dots 
+ function rollDice() {
+  if (message.textContent == "click on the dice to roll it") {
+    let diceContainer = document.getElementById("diceContainer");
+    let diceSpans = diceContainer.querySelectorAll("span");
+    const randomNumber = Math.floor(Math.random() * 6) + 1;
     const dice = createDice(randomNumber);
+    diceContainer.innerHTML = "";
     diceContainer.appendChild(dice);
-    rollDice();
-}
-        }
-
-// Roll dice
-let dice
-
-try{
-function rollDice() {
-    if (message.textContent === "click on the dice to roll it") {
-
-        const diceContainer = document.getElementById("diceContainer");
-        const diceSpans = diceContainer.querySelectorAll("span");
-        const numberOfRolls = diceSpans.length;
-
-        const randomNumber = Math.floor(Math.random() * numberOfRolls) + 1;
-
-        diceContainer.innerHTML = "";
-        const dice = createDice(randomNumber);
-        diceContainer.appendChild(dice);
-
-        message.textContent = "dice rolled: ";
+    setTimeout(() => {
+      dice.style.animation = 'roll 8s infinite linear';
+    }, 100);
+    
+     setTimeout(() => {
+      diceSpans.forEach(span => span.classList.remove("roll"));
+      const correctNumber = rollDiceInternal(); // call function rollDiceInternal() to keep result in correctNumber
+      checkAnswer(correctNumber);
+     });
     }
+  }
 }
 
-        
-} catch (error) {
-    console.error('Ett fel inträffade:', error);
-  }
-
+  
    // call the winner or loser video from result
  const messageElement = document.getElementById("result");
  const winnervideo = document.createElement("video");
