@@ -1,32 +1,27 @@
- /* button and function to restart the game  
- const playAgainBtn = document.getElementById("play");
+const playAgainBtn = document.getElementById("play");
+playAgainBtn.addEventListener('click', function () {
+playerChoices.length = 0; // empty choicers array
+//messageElement.textContent = ""; // clear message "Roll Dice"
+   });
 
- PlayAgainBtn.addEventListener('click', startNewGame);*/
-   
- //Börjar här
- const allImages = document.querySelectorAll(".image"); // Alla bilder som spelaren kan välja (value)
+const allImages = document.querySelectorAll(".image"); // Alla bilder som spelaren kan välja (value)
 const betScore = document.getElementById("bet-score"); //to call elements for cash
 const value = ["10", "50", "100",];   
 const picknumberElement = document.getElementById("picknumber"); // picked value 
 const playElement = document.getElementById("message");//message to click on dice
 const buttons = document.querySelectorAll(".control"); //1-6 buttons in board
-const myPlayBtn = document.getElementById("play");
-const resetButton = document.getElementById("resetButton");
+//const resetButton = document.getElementById("resetButton");
 
-//const playerScore = document.getElementById("player-score");
+const playerScore = document.getElementById("player-score");
 let playerChoices = []; 
 let choicecounter = 0;
 
-//const messageElement = document.getElementById("message");
 const message = document.getElementById("message");
 
 console.log("DOM-innehållet har laddats");
 
 //above is just variabels
  
-myPlayBtn.addEventListener('click', startNewGame);
-
-console.log("Play-knapp:", myPlayBtn);
 
 function startNewGame() {
     playerChoices.length = 0; // Clear the playerChoices array
@@ -98,34 +93,37 @@ function startNewGame() {
          console.log(playerChoices);
         }
     }    
-    
-     // Anropa rollDice när spelaren har valt alla sina nummer
-function rollDice() {
-if (message.textContent == "click on the dice to roll it") {
-
-    console.log(rollDice);
-
-    const diceContainer = document.getElementById("diceContainer");
-    const diceSpans = diceContainer.querySelectorAll("span");
-    const numberOfRolls = diceSpans.length;
-
-    const randomNumber = Math.floor(Math.random() * numberOfRolls) + 1;
-
-    diceContainer.innerHTML = "";
+   
+// Anropa rollDice() när spelaren har valt alla sina nummer
+if (choicecounter === playerChoices.length) {
     const dice = createDice(randomNumber);
     diceContainer.appendChild(dice);
+    rollDice();
+}
 
-    message.textContent = "dice rolled: ";
-        
-    // Returnera det slumpmässiga numret för eventuell användning
-    return randomNumber; 
-    }
-    if (randomNumber === playerChoice) {
-        console.log("Grattis, ditt val matchade det slumpmässiga numret!");
-    } else {
-        console.log("Tyvärr, ditt val matchade inte det slumpmässiga numret.");
+try{
+function rollDice() {
+    if (message.textContent === "click on the dice to roll it") {
+
+        const diceContainer = document.getElementById("diceContainer");
+        const diceSpans = diceContainer.querySelectorAll("span");
+        const numberOfRolls = diceSpans.length;
+
+        const randomNumber = Math.floor(Math.random() * numberOfRolls) + 1;
+
+        diceContainer.innerHTML = "";
+        const dice = createDice(randomNumber);
+        diceContainer.appendChild(dice);
+
+        message.textContent = "dice rolled: ";
     }
 }
+
+         
+} catch (error) {
+    console.error('Ett fel inträffade:', error);
+  }
+
        
  // call the winner or loser video from result
  const messageElement = document.getElementById("result");
@@ -179,7 +177,7 @@ if (message.textContent == "click on the dice to roll it") {
   console.log(randomNumber)
  }
   
- /*
+ 
  function resetDice() {
     diceContainer.innerHTML = "";
     const randomNumber = Math.floor(Math.random() * 6) + 1;
@@ -191,7 +189,7 @@ if (message.textContent == "click on the dice to roll it") {
 }
 
 resetButton.addEventListener ("click", resetDice);
-resetDice();*/
+resetDice();
 
         //move back to top when you click "playagain" button
         document.body.scrollTop = 0;  // For Safari
