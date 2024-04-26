@@ -1,11 +1,12 @@
-let playAgainBtn = document.getElementById("play");
-playAgainBtn.addEventListener('click', function () {
+button = document.getElementById("play");
+button.addEventListener("click", function () {
 playerChoices.length = 0; // empty choicers array
-//messageElement.textContent = ""; // clear message "Roll Dice"
-   });
+messageElement.textContent = ""; // clear message "Roll Dice"
+ 
  //move back to top when you click "playagain" button
   document.body.scrollTop = 0;  // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera*/
+});
 
 
    //Variabels
