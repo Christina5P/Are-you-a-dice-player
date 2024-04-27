@@ -26,7 +26,9 @@ let message = document.getElementById("message");
 
 console.log("DOM is loaded");
 
-function startNewGame() {
+/*function startNewGame(){ 
+ addEventListener('click', function() {
+ 
     playerChoices.length = 0; // Clear the playerChoices array
     choicecounter = 0;
     cashes = null;
@@ -37,13 +39,17 @@ function startNewGame() {
      buttons.forEach(button => {
     button.style.backgroundColor = "#000000";  // Reset the button colors
     });
-     message.textContent = "Click on the dice to roll it";   // Clear any previous message
-  }
+    message.textContent = "Click on the dice to roll it";   // Clear any previous message
+    dice.style.animation = '';
+      });
+    };
+  console.log("startNewGame", startNewGame());*/
+
     document.querySelectorAll(".image")
 
      // Listener click to save pick img
      allImages.forEach(image => {
-        image.addEventListener("click", function(event) {
+        image.addEventListener("click", function() {
            
             // Show picked img and hide the other
             allImages.forEach(img => {
@@ -57,7 +63,7 @@ function startNewGame() {
 
             let selectedImage = image;
             console.log(selectedImage);           
-            let textContent = selectedImage;
+           // let textContent = selectedImage;
 
             // to call text-instructions how may number to pick
         if (selectedImage) {
@@ -105,17 +111,15 @@ function startNewGame() {
  winnervideo.alt = "winner";
  winnervideo.type = "video/mp4";
  winnervideo.autoplay = true;
- winnervideo.muted = true;
  loservideo.src ="assets/image/lose.mp4";
  loservideo.alt = "loser";
  loservideo.type = "video/mp4";
  loservideo.autoplay = true;
- loservideo.muted = true;
+
   
  //function to check playerschoice and give result and video
  function checkAnswer(randomNumber) {
- 
-    let selectedImage = document.querySelector(".image.selected");
+     let selectedImage = document.querySelector(".image.selected");
     
     if (selectedImage) {
    if (playerChoices.includes(randomNumber.toString()))  {
@@ -140,23 +144,11 @@ function startNewGame() {
     messageElement.textContent = "You lost";
     messageElement.appendChild(loservideo);
     
-    console.log("correct number", randomNumber);
-    console.log(playerChoices);
-    console.log(selectedImage);
-    console.log(loservideo.autoplay);
+     console.log(loservideo.autoplay);
     }
   }
  
   console.log(randomNumber)
  }
 
- /* 
- function resetDice() {
-    diceContainer.innerHTML = "";
-    let randomNumber = Math.floor(Math.random() * 6) + 1;
-    let dice = createDice(randomNumber);
-    diceContainer.appendChild(dice);
-    dice.style.animation = 'roll 8s infinite linear';
-    playerChoices.length = 0;
-    messageElement.textContent = ""; //clear msg "dice rolled" before a new game 
-} */
+ 

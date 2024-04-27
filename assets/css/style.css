@@ -151,14 +151,14 @@ button {
     border-radius: 10px;
     font-family:sans-serif;
     position: absolute;
-    animation: roll 8s infinite linear;
+    /*animation: roll 8s infinite linear;*/
    }
-
+/*
 @keyframes roll {
   50% {
       transform: rotateX(455deg) rotateY(455deg);
   }
-}
+}*/
 
 .face {
     position: absolute;
