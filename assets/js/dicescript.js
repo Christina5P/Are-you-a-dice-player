@@ -13,16 +13,17 @@ let dice = document.createElement("div");
 dice.classList.add("dice");
 
    //addventlistener to start roll dice
-   dice.addEventListener('click', function() {
+   dice.addEventListener("click", function() {
     console.log("clicked on dice")
-    //dice.style.animation = 'roll 8s infinite linear';   //Start animation of roll
+    dice.classList.add('animate');
     setTimeout(() => {
+      dice.classList.remove('animate');
       playerChoices.push(randomNumber);
       checkAnswer(randomNumber);
-          }, 4000); // dice rolls in 4 seconds
+          }, 5000); // dice rolls in 4 seconds
       message.textContent = "dice rolled: ";
 });
-    
+
 //create the dots position on dice
 function createDice(randomNumber) {
   let dotPositionMatrix = {
