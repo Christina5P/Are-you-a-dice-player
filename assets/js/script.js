@@ -150,8 +150,7 @@ function startNewGame() {
   console.log(randomNumber)
  }
 
-  
- 
+ /* 
  function resetDice() {
     diceContainer.innerHTML = "";
     let randomNumber = Math.floor(Math.random() * 6) + 1;
@@ -160,4 +159,4 @@ function startNewGame() {
     dice.style.animation = 'roll 8s infinite linear';
     playerChoices.length = 0;
     messageElement.textContent = ""; //clear msg "dice rolled" before a new game 
-}
+} */

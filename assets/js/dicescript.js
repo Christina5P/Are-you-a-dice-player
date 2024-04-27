@@ -1,12 +1,19 @@
- let diceContainer = document.getElementById("diceContainer") //call dicecontainer from HTML to create dice in
- let diceSpans = diceContainer.querySelectorAll("span");  //js creates spans for numbers
- let numberOfRolls = diceSpans.length;
- let randomNumber = Math.floor(Math.random() * numberOfRolls) + 1;
 
-diceContainer.innerHTML = "" ; // empty the dicecontainer to next game
 
-try {
+ let randomNumber = Math.floor(Math.random() * 6) + 1;
   
+function rollDiceInternal() {
+  const diceContainer = document.getElementById("diceContainer");
+  const diceSpans = diceContainer.querySelectorAll("span");
+  //const numberOfRolls = diceSpans.length;
+  //const randomNumber = Math.floor(Math.random() * numberOfRolls) + 1;
+  diceContainer.innerHTML = ""; // clear dots to new roll
+  const dice = createDice(randomNumber);
+  diceContainer.appendChild(dice);
+        return randomNumber; 
+}     
+
+
 //create the dots position on dice:(innan var det bara number i parentes)
 function createDice(randomNumber) {
   let dotPositionMatrix = {
@@ -34,16 +41,18 @@ function createDice(randomNumber) {
 }
  dice = createDice(randomNumber);
  diceContainer.appendChild(dice);
- //dice.style.animation = rollDice();
+ //dice.style.animation = rollDiceInternal();
  
    //addventlistener to start roll dice
   dice.addEventListener('click', function() {
+    console.log("clicked on dice")
     dice.style.animation = 'roll 8s infinite linear';   //Start animation of roll
     setTimeout(() => {
       playerChoices.push(randomNumber);
       checkAnswer(randomNumber);
       dice.style.animation = '';
       }, 4000); // dice rolls in 4 seconds
+      message.textContent = "dice rolled: ";
 });
           //for animation-switch the dots sides in case of the randomnumber
    if(dice){   
@@ -75,13 +84,5 @@ function createDice(randomNumber) {
       
         }, 100);
                   
-    
-         
-} catch (error) {
-  console.error('Ett fel inträffade:', error);
-}
-        
-        
-     
- 
+      
 

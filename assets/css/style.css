@@ -109,6 +109,10 @@ button {
     margin: 20%;
 }
 
+.button:hover {
+    cursor: pointer;
+}
+
 .dice:hover {
     cursor: pointer;
 }
