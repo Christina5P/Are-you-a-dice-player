@@ -1,21 +1,12 @@
-const playAgainBtn = document.getElementById("play");
+
+   const playAgainBtn = document.getElementById("play");
 
 playAgainBtn.addEventListener('click', function () {
-  playerChoices.length = 0; // empty choicers array
- //messageElement.textContent = ""; // clear message "Roll Dice"
-  message.textContent = "click here to roll dice";
-  selectedImage = null; // empty picked value
-  picknumberElement.textContent = ""; // empty picknumber textcontent
-  choicecounter=0; // empty players array with numbers
-   
- console.log("Button clicked!");
-   });
-
-
+  location.reload();
  //move back to top when you click "playagain" button
   document.body.scrollTop = 0;  // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera*/
-
+});
 
    //Variabels
 const allImages = document.querySelectorAll(".image"); // 3 value.img to pick from
