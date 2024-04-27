@@ -117,19 +117,9 @@ button {
     cursor: pointer;
 }
 
-
-  
-/* click to roll dice button
-#message {
-    margin: 5%;
- font-size: 1rem;
-
-}*/
-/*
-#message:hover {
+#play:hover {
     cursor: pointer;
-}*/
-
+}
 
 #dice-container {
     margin-top: 20px;

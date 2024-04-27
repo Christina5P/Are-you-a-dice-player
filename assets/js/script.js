@@ -100,10 +100,12 @@ console.log("DOM is loaded");
  winnervideo.alt = "winner";
  winnervideo.type = "video/mp4";
  winnervideo.autoplay = true;
+ winnervideo.muted = true;
  loservideo.src ="assets/image/lose.mp4";
  loservideo.alt = "loser";
  loservideo.type = "video/mp4";
  loservideo.autoplay = true;
+ loservideo.muted = true;
 
   
  //function to check playerschoice and give result and video
@@ -131,11 +133,13 @@ console.log("DOM is loaded");
   
     }   else {
     messageElement.textContent = "You lost";
+    }
     messageElement.appendChild(loservideo);
-    
+    loservideo.autoplay = true;
      console.log(loservideo.autoplay);
     }
+    console.log(randomNumber)
   }
  
-  console.log(randomNumber)
- }
+
+
