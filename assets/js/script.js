@@ -1,12 +1,20 @@
-button = document.getElementById("play");
-button.addEventListener("click", function () {
-playerChoices.length = 0; // empty choicers array
-messageElement.textContent = ""; // clear message "Roll Dice"
- 
+const playAgainBtn = document.getElementById("play");
+
+playAgainBtn.addEventListener('click', function () {
+  playerChoices.length = 0; // empty choicers array
+ //messageElement.textContent = ""; // clear message "Roll Dice"
+  message.textContent = "click here to roll dice";
+  selectedImage = null; // empty picked value
+  picknumberElement.textContent = ""; // empty picknumber textcontent
+  choicecounter=0; // empty players array with numbers
+   
+ console.log("Button clicked!");
+   });
+
+
  //move back to top when you click "playagain" button
   document.body.scrollTop = 0;  // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera*/
-});
 
 
    //Variabels
@@ -14,7 +22,7 @@ const allImages = document.querySelectorAll(".image"); // 3 value.img to pick fr
 const betScore = document.getElementById("bet-score"); //to call elements for cash
 const value = ["10", "50", "100",];   
 let picknumberElement = document.getElementById("picknumber"); // picked value 
-let playElement = document.getElementById("message");//message to click on dice
+//let playElement = document.getElementById("message");//message to click on dice
 const buttons = document.querySelectorAll(".control"); //1-6 numbersbuttons in board to pick from
 //const resetButton = document.getElementById("resetButton");
 
@@ -25,25 +33,6 @@ let choicecounter = 0; //to start with
 let message = document.getElementById("message");
 
 console.log("DOM is loaded");
-
-/*function startNewGame(){ 
- addEventListener('click', function() {
- 
-    playerChoices.length = 0; // Clear the playerChoices array
-    choicecounter = 0;
-    cashes = null;
-   
-    allImages.forEach(image => {
-      image.classList.remove("selected"); // Iterate through all images and remove the "selected" class
-    });
-     buttons.forEach(button => {
-    button.style.backgroundColor = "#000000";  // Reset the button colors
-    });
-    message.textContent = "Click on the dice to roll it";   // Clear any previous message
-    dice.style.animation = '';
-      });
-    };
-  console.log("startNewGame", startNewGame());*/
 
     document.querySelectorAll(".image")
 
@@ -150,5 +139,3 @@ console.log("DOM is loaded");
  
   console.log(randomNumber)
  }
-
- 
