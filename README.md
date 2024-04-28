@@ -154,8 +154,10 @@ I have checked css code through https://jigsaw.w3.org/css-validator/#validate_by
 
 ### JS Hint
 I have checked JS codes through https://jshint.com/
-![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/351c7846-e917-4b99-83c5-2aded9706815)
+![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/57e0dbb5-2698-4a26-bd46-6540dd7aa42b)
 ![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/6968d217-4013-4965-91e5-b6760b07b665)
+![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/92c2665e-2cca-48d6-85df-82ddf7ec9cfd)
+
 
 
 ### Lighthouse
