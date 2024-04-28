@@ -27,11 +27,11 @@ You start at homepage with instructions how to play and a playbutton to click. A
 ### Game
 On the top you have a button "Back to the menu" if you want to read the instructions again.
 
-You start to bet from 3 different values and you se easily your bet, since the other values dissapear after your choice.
+You start to bet from 3 different values and you can easily see your bet, since the other values dissapear after your choice.
 When you have bet, you can see how many numbers you will click on and when you click they change colours, so you can see your choice.
 ![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/103ccfa2-121e-4f69-a956-49d66725988f)
  
-After, you click on the "click-text" to make the dice roll.
+After, you click the dice to make it roll.
 The dice will roll with the animations and generate a number to compare if it is the same number you have choosen.
 
 ![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/5231050f-8037-4746-971b-cad579e30e00)
@@ -61,20 +61,27 @@ My first thought was to build a 2048 - game board with number to merge into high
 
 ## Design
 I choosed a colourful font to get a happy feeling and border-radius so the buttons are not so "stiff"
+Background color for bigger screen is a grey background to lift the colourful text 
+![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/1cfc3e1d-b391-4a6e-bec8-cc670a4e3974)
+
+
+When I tested the game on smaller screens as mobile and ipad, I saw the font won´t show the colours and it was too dark approach, so I changed the background colour and used the font Bungee instead of in max-width: 820px. 
+![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/06191f72-1bdc-460c-8fda-37c23dcef02c)
+
+![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/4b505aa9-ada0-4c8c-ac46-74bea8b80cf6)
+
+
+I  have some contrast alert in Wave, but I think it depends of the font style, since I tried a lot of different backgrounds and it´s still the same number of alerts.
 
 ![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/f8f5c177-7f44-40c7-83d6-3afea1209afc)
 
-When I tested the game on smaller screens as mobile and ipad, I saw the font won´t show the colours and it was too dark approach, so I changed the background colour and used the font Bungee instead of in max-width: 768px. 
-
-![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/4b505aa9-ada0-4c8c-ac46-74bea8b80cf6)
 
 I have also create an own Head icon to use in head
 ![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/68263cd0-7c44-4f3a-851b-d2ef1c5609ae)
 
 <hr>
 
-
-I made a handpointer when you click on numbers.
+I made a handpointer when you click on numbers, dice and buttons.
 
 ## Future Features to Implement
 
@@ -145,10 +152,10 @@ I have checked css code through https://jigsaw.w3.org/css-validator/#validate_by
 
 ![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/9fe4711b-9699-4092-9474-ce2f4c5e05af)
 
-I have checked JS codes through https://codebeautify.org/jsvalidate.
-The validator displayed 3 errors, but when I tried to change that variable, the functions stopped working, so I ignored the validators answer.
-
-![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/d2bdf446-382e-4355-a1e6-2f95bf281375)
+### JS Hint
+I have checked JS codes through https://jshint.com/
+![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/351c7846-e917-4b99-83c5-2aded9706815)
+![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/6968d217-4013-4965-91e5-b6760b07b665)
 
 
 ### Lighthouse
