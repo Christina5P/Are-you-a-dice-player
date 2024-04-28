@@ -50,7 +50,7 @@ h2 {
     font-size: 2rem;
     text-align: center;
 }
-p{
+#instructions {
     text-align: center;
     margin-top: 5%;
 }
@@ -238,30 +238,40 @@ video {
 
 @media screen and (min-width: 821px) {
       body{
-        font-size: 3.5rem;
+        font-size: 5rem;
     }
     h1 {
-        font-size: 2em;
+        font-size: 3em;
     }
     .image-container {
-    font-size: 2.5rem;
+    font-size: 4rem;
 }
     h2{
-font-size: 4rem;
+font-size: 5rem;
 margin: 14px;
     }
     .image {
-      font-size: 17rem;
+      font-size: 40rem;
     }
 
     p {
-     font-size: 3rem;
-     float: left;
+     font-size: 5rem;
+     
     }
     .button-container button {
         margin-bottom: 10px;
-        width: auto;
     }
+        button {
+            font-family: 'Honk', "Raleway", sans-serif;
+            font-size: 4rem;
+            text-align: center;
+            background-color: black;
+            height: 10%;
+            width: 25%;
+            margin: 20%;
+        }
+        
+    
 .rules {
     font-size: 3rem;
     font-style: oblique;
@@ -273,7 +283,7 @@ a {
 
 #message {
     margin: 5%;
-    font-size: 3rem;
+    font-size: 5rem;
 }
 
 .dice {
@@ -294,6 +304,8 @@ a {
 
   #result {
 margin-top: 20%;
+display: flex;
+flex-flow: column;
 }
 
 /* button for play*/
@@ -308,59 +320,23 @@ margin-top: 20%;
 
 @media screen and (min-width: 1024px) {
     body{
-      font-size: 5rem;
+      font-size: 6rem;
   }
   h1 {
-      font-size: 3em;
+      font-size: 4em;
   }
   .image-container {
-  font-size: 3.5rem;
+  font-size: 4.5rem;
 }
   h2{
-font-size: 4rem;
+font-size: 5rem;
 margin: 14px;
   }
-  .image {
-    font-size: 17rem;
-  }
-
-  p {
-   font-size: 3rem;
-   float: left;
-  }
-  .button-container button {
-      margin-bottom: 10px;
-      width: auto;
-  }
-.rules {
-  font-size: 3rem;
-  font-style: oblique;
-  margin-left: 25%;
-}
+ 
 a {
-  font-size: 3rem;
+  font-size: 4rem;
 }
 
-#message {
-  margin: 5%;
-  font-size: 3rem;
-}
-
-.dice {
-  height: 150px;
-  width: 150px;
-  border: 2px solid black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-      margin: 0 50%;
-  transition: transform 0.5s ease;
-  color: black;
-  background-color: white;
-  border-radius: 10px;
-  font-family:sans-serif;
-  position: absolute;
-}
 
 #result {
 margin-top: 20%;
@@ -368,20 +344,11 @@ margin-top: 20%;
 
 /* button for play*/
 .play {
-  width: 70%;
+  width: 50%;
   height: fit-content;
    border: radius 5%;;
    margin: 0;
 }
 
 
-button {
-    font-family: 'Honk', "Raleway", sans-serif;
-    font-size: 3rem;
-    text-align: center;
-    background-color: black;
-    height: 10%;
-    width: 25%;
-    margin: 20%;
-}
 }
