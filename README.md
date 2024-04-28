@@ -67,12 +67,16 @@ I choosed a colourful font to get a happy feeling and border-radius so the butto
 Background color for bigger screen is a grey background to lift the colourful text 
 <hr>
 When I tested the game on smaller screens as mobile and ipad, I saw the font won´t show the colours and it was too dark approach, so I changed the background colour and used the font Bungee instead of in max-width: 820px. <hr>
-![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/06191f72-1bdc-460c-8fda-37c23dcef02c)
 
 ![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/4b505aa9-ada0-4c8c-ac46-74bea8b80cf6)
 
 ![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/b86d5fcd-2854-4aa9-8964-dabeed51aecb)
 
+![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/06191f72-1bdc-460c-8fda-37c23dcef02c)
+
+![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/98bebeba-3537-4abd-92e7-6c9a59520d4e)
+
+<hr>
 
 I  have some contrast alert in Wave, but it depends of the font style, since I tried a lot of different backgrounds and it´s still the same number of alerts.
 I decided to keep the font anyway, because I dont think you get distrurbed of any contrastproblem.<hr>
