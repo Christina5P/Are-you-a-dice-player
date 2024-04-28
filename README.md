@@ -159,6 +159,7 @@ I have checked css code through https://jigsaw.w3.org/css-validator/#validate_by
 
 ### JS Hint
 I have checked JS codes through https://jshint.com/
+<br>
 ![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/57e0dbb5-2698-4a26-bd46-6540dd7aa42b)
 
 
