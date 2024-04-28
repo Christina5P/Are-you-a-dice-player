@@ -40,6 +40,7 @@ If you win, you should feel like the jumping man with the green dice that pops u
 
 And it´s harder feeling to lose, but make it a new try with the pulling man.
 After your play you can easily click the "play again" button to restart the game.
+<br>
 ![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/669fa2a9-65bf-4c3e-bfb6-24cdff0c37ea)
 
 <br>
