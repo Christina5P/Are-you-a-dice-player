@@ -5,7 +5,7 @@ If you like numbers, dicegame and bets, this is a simple game to play.
 
 You choose if you want to bet 10, 20 or 100 euro by click on the bill.
 The higher you bet, the more risk you take! 
-After your bet, you choose numbers regarding to your bet. If you bet 10 euro, you choose 3 numbers, for 50 euro you get 2 numbers and 100 euro you get 1 number.
+After your bet, you choose numbers regarding your bet. If you bet 10 euro, you choose 3 numbers, for 50 euro you get 2 numbers and 100 euro you get 1 number.
 
 After you have bet and clicked on numbers, you click to roll a dice.
 The dice will show you the result and if you have the number in your choises, you win the bet. Otherwise you lose.
@@ -27,7 +27,7 @@ You start at homepage with instructions how to play and a playbutton to click. A
 ### Game
 On the top you have a button "Back to the menu" if you want to read the instructions again.
 
-You start to bet from 3 different values and you can easily see your bet, since the other values dissapear after your choice.
+You start to bet from 3 different values and you can easily see your bet, since the other values dissapear after your choice. <hr>
 When you have bet, you can see how many numbers you will click on and when you click they change colours, so you can see your choice.
 ![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/103ccfa2-121e-4f69-a956-49d66725988f)
  
@@ -37,14 +37,17 @@ The dice will roll with the animations and generate a number to compare if it is
 ![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/5231050f-8037-4746-971b-cad579e30e00)
 
 If you win, you should feel like the jumping man with the green dice that pops up and you get a result with the value you win.
-https://tvmspace-my.sharepoint.com/:v:/r/personal/christina_ahman_tv4_se/Documents/Desktop/win.mp4.mp4?csf=1&web=1&e=Xit8Ht
 
 And it´s harder feeling to lose, but make it a new try with the pulling man.
-https://tvmspace-my.sharepoint.com/:v:/r/personal/christina_ahman_tv4_se/Documents/Desktop/lose.mp4?csf=1&web=1&e=D9FITy
-
 After your play you can easily click the "play again" button to restart the game.
-<hr>
+<br>
+![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/669fa2a9-65bf-4c3e-bfb6-24cdff0c37ea)
+
+<br>
 If you click, you get to the top to choose new numbers and don´t have to scroll back.
+<br>
+You get instruction through the game and you are not able to choose more choices than you are allowed to.
+You can still roll the dice without any choices, but nothing happens then more than a rolling dice. 
 
 ### Footer 
 A copyright of the game creator.
@@ -53,33 +56,43 @@ A copyright of the game creator.
 ## Structure
 
 I started to draw a skeleton in Balsamiq.
-My first thought was to build a 2048 - game board with number to merge into higher values and scores, but after a while I realised this  wasn´t in this scoop and a little to comlicated for PP2, so I restarted with this game and used the same idea for skeleton.
+My first thought was to build a 2048 - game board with number to merge into higher values and scores, but after a while I realised this  wasn´t in this scoop and a little to complicated for PP2, so I restarted with this game and used the same idea for skeleton, but made some changes.
+<br>
+Old frame:
 
 ![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/f59cd826-ccc8-4d99-9020-a79b429dccd6)
 
 ![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/e96e5bbb-16db-4cc7-91fb-1c45cbcf4f28)
 
+New frame:
+
+![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/e91a6fd4-d567-4b0c-9b86-13793237b73c)
+
+![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/a34f2e01-2bd8-4ed3-a261-fd510eae30af)
+
 ## Design
 I choosed a colourful font to get a happy feeling and border-radius so the buttons are not so "stiff"
 Background color for bigger screen is a grey background to lift the colourful text 
-![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/1cfc3e1d-b391-4a6e-bec8-cc670a4e3974)
-
-
-When I tested the game on smaller screens as mobile and ipad, I saw the font won´t show the colours and it was too dark approach, so I changed the background colour and used the font Bungee instead of in max-width: 820px. 
-![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/06191f72-1bdc-460c-8fda-37c23dcef02c)
-
-![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/4b505aa9-ada0-4c8c-ac46-74bea8b80cf6)
-
-
-I  have some contrast alert in Wave, but I think it depends of the font style, since I tried a lot of different backgrounds and it´s still the same number of alerts.
+<hr>
+When I tested the game on smaller screens as mobile and ipad, I saw the font won´t show the colours and it was too dark approach, so I changed the background colour and used the font Bungee instead of in max-width: 820px. <hr>
 
 ![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/f8f5c177-7f44-40c7-83d6-3afea1209afc)
 
+![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/4b505aa9-ada0-4c8c-ac46-74bea8b80cf6)
+
+![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/98bebeba-3537-4abd-92e7-6c9a59520d4e)
+
+![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/5b177641-8b6b-42b2-8be1-946230e4c402)
+
+
+
+I  have some contrast alert in Wave, but it depends of the font style, since I tried a lot of different backgrounds and it´s still the same number of alerts.
+I decided to keep the font anyway, because I dont think you get distrurbed of any contrastproblem.<hr>
 
 I have also create an own Head icon to use in head
-![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/68263cd0-7c44-4f3a-851b-d2ef1c5609ae)
 
-<hr>
+![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/79e01bff-fbe7-42b2-81ec-a046889c7d51)
+
 
 I made a handpointer when you click on numbers, dice and buttons.
 
@@ -94,8 +107,10 @@ On right hand side tha game will represent a best score list.
 ## Media
 
 - Website logo is picked from www.favicon.io and downloaded to my repository.
-- pictures of values is taken from /www.istockphoto.com
-- the winner and loservideo is pictures taking from www.canva.com and edit by me to an animated 5seconds video.
+- Pictures of values is taken from /www.istockphoto.com
+- The winner and loservideo is pictures taking from www.canva.com and edit by me to an animated 4 seconds video.
+- https://favicon.io/ - For favicon to head
+
 
 ## Deployment
 The site was created from Gitpod and is continuing push to GitHub.
@@ -131,9 +146,11 @@ The site was deployed to GitHub pages. The way I manage that:
 - My functions stopped working without a reason.
   I realised the idea to change name of the repository wasnt that good, since it got errors on links etc.
   I changed back to the first name and it start worked again.
-  Pitty, I got 3 different github pages and 2 of them has error 404, since they are not current any more.
+  Pitty, I got 3 different github pages and 2 of them had error 404, since they are not current any more.
 ![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/5579bd95-2bfb-4f55-be24-c7ea9d620eff)
-
+<br>
+It is resolved today.
+<hr>
 
 ## Testing
 
@@ -154,6 +171,7 @@ I have checked css code through https://jigsaw.w3.org/css-validator/#validate_by
 
 ### JS Hint
 I have checked JS codes through https://jshint.com/
+<br>
 ![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/57e0dbb5-2698-4a26-bd46-6540dd7aa42b)
 
 
@@ -180,7 +198,8 @@ I have some imported people around me to helped me out with PP2
 
 * Tutor Ernst from "Digitala lyftet", who has spent hours with me to explain and solved my problems.
 * My student fellow Josefin Yoshida-Dahlqvist, who always hold my hand and try to help me out.
-* CI Tutors 
+* CI Tutors
+* Alumn Jonathan Zakrisson, who gave me some feedback and tried to help me resolve problem as getting randomnumber and errors.
 
 
 ## Source references
@@ -229,8 +248,6 @@ Tutoring dice and dots
 - https://github.com/bradtraversy/btre_project/issues/9 
 Troubleshot url-problems
 
-- https://favicon.io/ - For favicon to head
-
 - Tutoring lesson with Ernst, Digitala lyftet
 
 - CI Tutor to help to me understand function "checkAnswer"
@@ -269,4 +286,19 @@ Tutoring and help me with codes for dice animation
 
 https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_loc_reload
 -Tutor to reload the game
+
+## Mentions
+I have lot of different tutor references and spend a lot of time to create an animated dice with javascript instead of any picture of dice or number for an easy handling.
+<br>
+I build the game with a "step by step" functions with pop up information what to do next from Javascript.br>
+After feedback I continued with new functions in the game.
+I realised when I needed help from my alumn that my script had functions and loops which was build on top of the other and it was hard to understand, even if I had a lot of comments. Then I split the script in 2 and had one for dice and dots and another for the playfunctions.
+<br>
+I also went through my codes step by step to get better structure.
+I decided to use Javascript for the most of content, since this belongs to this project.
+It has been a "back and forth" project and run out of time in the end, so I have concentrated on functions without errors and understand Javascript.
+<br> 
+Since this is a quick game I started with styling for smaller devices and it has an opportunity to get nicer styles, preferably a little more atyling for bigger devices.
+I would also look to style it, so you dont need to schroll up and down.
+
 
