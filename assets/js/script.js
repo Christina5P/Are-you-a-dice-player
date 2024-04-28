@@ -4,8 +4,8 @@ playAgainBtn.addEventListener('click', function () {
   location.reload();
 
  //move back to top when you click "playagain" button
-  document.body.scrollTop = 0;  // For Safari
- document.Element.scrollTop = 0; // For Chrome, Firefox, IE and Opera*/
+ document.body.scrollTop = 0;  // For Safari
+ document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera*/
 });
 
 //Variabels
