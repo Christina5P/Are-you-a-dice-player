@@ -27,7 +27,7 @@ You start at homepage with instructions how to play and a playbutton to click. A
 ### Game
 On the top you have a button "Back to the menu" if you want to read the instructions again.
 
-You start to bet from 3 different values and you can easily see your bet, since the other values dissapear after your choice.
+You start to bet from 3 different values and you can easily see your bet, since the other values dissapear after your choice. <hr>
 When you have bet, you can see how many numbers you will click on and when you click they change colours, so you can see your choice.
 ![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/103ccfa2-121e-4f69-a956-49d66725988f)
  
