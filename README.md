@@ -21,7 +21,7 @@ The idea is taken from the betwheel at the fairground.
 ### Homepage
 
 You start at homepage with instructions how to play and a playbutton to click. After click you go directed to the game.
->br>
+
 ![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/d6031e9c-6436-4c01-92c4-fa445202571c)
 
 ### Game
