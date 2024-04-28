@@ -37,12 +37,11 @@ The dice will roll with the animations and generate a number to compare if it is
 ![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/5231050f-8037-4746-971b-cad579e30e00)
 
 If you win, you should feel like the jumping man with the green dice that pops up and you get a result with the value you win.
-https://tvmspace-my.sharepoint.com/:v:/r/personal/christina_ahman_tv4_se/Documents/Desktop/win.mp4.mp4?csf=1&web=1&e=Xit8Ht
 
 And it´s harder feeling to lose, but make it a new try with the pulling man.
-https://tvmspace-my.sharepoint.com/:v:/r/personal/christina_ahman_tv4_se/Documents/Desktop/lose.mp4?csf=1&web=1&e=D9FITy
-
 After your play you can easily click the "play again" button to restart the game.
+![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/669fa2a9-65bf-4c3e-bfb6-24cdff0c37ea)
+
 
 If you click, you get to the top to choose new numbers and don´t have to scroll back.
 
@@ -68,20 +67,17 @@ Background color for bigger screen is a grey background to lift the colourful te
 <hr>
 When I tested the game on smaller screens as mobile and ipad, I saw the font won´t show the colours and it was too dark approach, so I changed the background colour and used the font Bungee instead of in max-width: 820px. <hr>
 
+![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/f8f5c177-7f44-40c7-83d6-3afea1209afc)
+
 ![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/4b505aa9-ada0-4c8c-ac46-74bea8b80cf6)
 
 ![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/98bebeba-3537-4abd-92e7-6c9a59520d4e)
 
-![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/b86d5fcd-2854-4aa9-8964-dabeed51aecb)
-
 ![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/06191f72-1bdc-460c-8fda-37c23dcef02c)
-
-![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/f8f5c177-7f44-40c7-83d6-3afea1209afc)
 
 I  have some contrast alert in Wave, but it depends of the font style, since I tried a lot of different backgrounds and it´s still the same number of alerts.
 I decided to keep the font anyway, because I dont think you get distrurbed of any contrastproblem.<hr>
 
-<hr>
 I have also create an own Head icon to use in head
 
 I made a handpointer when you click on numbers, dice and buttons.
@@ -136,8 +132,9 @@ The site was deployed to GitHub pages. The way I manage that:
 - My functions stopped working without a reason.
   I realised the idea to change name of the repository wasnt that good, since it got errors on links etc.
   I changed back to the first name and it start worked again.
-  Pitty, I got 3 different github pages and 2 of them has error 404, since they are not current any more.
+  Pitty, I got 3 different github pages and 2 of them had error 404, since they are not current any more.
 ![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/5579bd95-2bfb-4f55-be24-c7ea9d620eff)
+It is resolved today.
 
 
 ## Testing
@@ -276,11 +273,16 @@ https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_loc_reload
 
 ## Mentions
 I have lot of different tutor references and spend a lot of time to create an animated dice with javascript instead of any picture of dice or number for an easy handling.
-I build the game with a "step by step" functions with pop up information what to do next from Javascript.
+<br>
+I build the game with a "step by step" functions with pop up information what to do next from Javascript.br>
 After feedback I continued with new functions in the game.
-I realised after I needed help from my alumn, my script had functions and loops which was build on top of the other and it was hard to understand, even if I had a lot of comments. Then I split the script in 2 and had one for dice and dots and another for the playfunctions.
+I realised when I needed help from my alumn that my script had functions and loops which was build on top of the other and it was hard to understand, even if I had a lot of comments. Then I split the script in 2 and had one for dice and dots and another for the playfunctions.
+<br>
 I also went through my codes step by step to get better structure.
 I decided to use Javascript for the most of content, since this belongs to this project.
-It has been a "back and forth" project and run out of time in the end, so I concentrated on functions without errors and understand Javascript and since thmis is a quick game I looked more on styling for smaller devices.
+It has been a "back and forth" project and run out of time in the end, so I have concentrated on functions without errors and understand Javascript.
+<br> 
+Since this is a quick game I started with styling for smaller devices and it has an opportunity to get nicer styles, preferably a little more atyling for bigger devices.
+I would also look to style it, so you dont need to schroll up and down.
 
 
