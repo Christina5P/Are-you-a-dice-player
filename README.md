@@ -42,10 +42,10 @@ And it´s harder feeling to lose, but make it a new try with the pulling man.
 After your play you can easily click the "play again" button to restart the game.
 ![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/669fa2a9-65bf-4c3e-bfb6-24cdff0c37ea)
 
-
+<br>
 If you click, you get to the top to choose new numbers and don´t have to scroll back.
-
-you get instruction through the game and you are not able to choose more choices than you are allowed to.
+<br>
+You get instruction through the game and you are not able to choose more choices than you are allowed to.
 You can still roll the dice without any choices, but nothing happens then more than a rolling dice. 
 
 ### Footer 
@@ -73,7 +73,9 @@ When I tested the game on smaller screens as mobile and ipad, I saw the font won
 
 ![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/98bebeba-3537-4abd-92e7-6c9a59520d4e)
 
-![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/06191f72-1bdc-460c-8fda-37c23dcef02c)
+![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/5b177641-8b6b-42b2-8be1-946230e4c402)
+
+
 
 I  have some contrast alert in Wave, but it depends of the font style, since I tried a lot of different backgrounds and it´s still the same number of alerts.
 I decided to keep the font anyway, because I dont think you get distrurbed of any contrastproblem.<hr>
@@ -134,8 +136,9 @@ The site was deployed to GitHub pages. The way I manage that:
   I changed back to the first name and it start worked again.
   Pitty, I got 3 different github pages and 2 of them had error 404, since they are not current any more.
 ![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/5579bd95-2bfb-4f55-be24-c7ea9d620eff)
+<br>
 It is resolved today.
-
+<hr>
 
 ## Testing
 
