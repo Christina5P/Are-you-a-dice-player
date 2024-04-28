@@ -76,14 +76,13 @@ When I tested the game on smaller screens as mobile and ipad, I saw the font won
 
 ![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/06191f72-1bdc-460c-8fda-37c23dcef02c)
 
+![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/f8f5c177-7f44-40c7-83d6-3afea1209afc)
 
 I  have some contrast alert in Wave, but it depends of the font style, since I tried a lot of different backgrounds and it´s still the same number of alerts.
 I decided to keep the font anyway, because I dont think you get distrurbed of any contrastproblem.<hr>
 
-![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/f8f5c177-7f44-40c7-83d6-3afea1209afc)
 <hr>
 I have also create an own Head icon to use in head
-![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/68263cd0-7c44-4f3a-851b-d2ef1c5609ae)
 
 I made a handpointer when you click on numbers, dice and buttons.
 
