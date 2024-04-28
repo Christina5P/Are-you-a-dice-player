@@ -91,6 +91,9 @@ I decided to keep the font anyway, because I dont think you get distrurbed of an
 
 I have also create an own Head icon to use in head
 
+![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/79e01bff-fbe7-42b2-81ec-a046889c7d51)
+
+
 I made a handpointer when you click on numbers, dice and buttons.
 
 ## Future Features to Implement
