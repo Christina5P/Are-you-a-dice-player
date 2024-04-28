@@ -56,11 +56,19 @@ A copyright of the game creator.
 ## Structure
 
 I started to draw a skeleton in Balsamiq.
-My first thought was to build a 2048 - game board with number to merge into higher values and scores, but after a while I realised this  wasn´t in this scoop and a little to complicated for PP2, so I restarted with this game and used the same idea for skeleton.
+My first thought was to build a 2048 - game board with number to merge into higher values and scores, but after a while I realised this  wasn´t in this scoop and a little to complicated for PP2, so I restarted with this game and used the same idea for skeleton, but made some changes.
+<br>
+Old frame:
 
 ![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/f59cd826-ccc8-4d99-9020-a79b429dccd6)
 
 ![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/e96e5bbb-16db-4cc7-91fb-1c45cbcf4f28)
+
+New frame:
+
+![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/e91a6fd4-d567-4b0c-9b86-13793237b73c)
+
+![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/a34f2e01-2bd8-4ed3-a261-fd510eae30af)
 
 ## Design
 I choosed a colourful font to get a happy feeling and border-radius so the buttons are not so "stiff"
