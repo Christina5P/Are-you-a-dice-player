@@ -6,7 +6,7 @@
 
   
  body {
-    background-color:#220c90; 
+    background-color:rgb(88, 80, 80);  
     font-family: "Honk", "bungee Spice", "Nabla&display";
     font-size: 1.5rem;
     text-align: center;
@@ -46,7 +46,7 @@ a{
 h1{
     font-size: 1em;
     text-align: center;
-    background-color:#121261;
+    background-color:rgb(139, 127, 127);
     padding-block: 5%;
     width: 100%;
     height:auto;
@@ -85,7 +85,7 @@ footer {
 
 /* players board with numberchoice*/
 #board {
-width: -webkit-fill-available;
+width: auto;
 height: fit-content;
 background: url(../image/background.png) ;
 background-size: 100%;

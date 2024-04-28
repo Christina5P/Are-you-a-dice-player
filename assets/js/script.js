@@ -1,22 +1,17 @@
+const playAgainBtn = document.getElementById("play");
 
-   const playAgainBtn = document.getElementById("play");
-
-   //reload the game by clicking playagain button
 playAgainBtn.addEventListener('click', function () {
   location.reload();
 
  //move back to top when you click "playagain" button
   document.body.scrollTop = 0;  // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera*/
+ document.Element.scrollTop = 0; // For Chrome, Firefox, IE and Opera*/
 });
 
 //Variabels
 const allImages = document.querySelectorAll(".image"); // 3 value.img to pick from
-const betScore = document.getElementById("bet-score"); //to call elements for cash
-const value = ["10", "50", "100",];   
 let picknumberElement = document.getElementById("picknumber"); // picked value 
 const buttons = document.querySelectorAll(".control"); //1-6 numbersbuttons in board to pick from
-const playerScore = document.getElementById("player-score"); 
 let playerChoices = []; //to start with
 let choicecounter = 0; //to start with
 
@@ -24,7 +19,7 @@ let choicecounter = 0; //to start with
 
 console.log("DOM is loaded");
 
-    document.querySelectorAll(".image")
+    document.querySelectorAll(".image");
 
      // Listener click to save pick img
      allImages.forEach(image => {
@@ -124,7 +119,7 @@ console.log("DOM is loaded");
     loservideo.autoplay = true;
 }
 }
-console.log(randomNumber)
+console.log(randomNumber);
  }
 
 

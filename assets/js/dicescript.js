@@ -16,7 +16,7 @@ dice.classList.add("dice");
 
    //addventlistener to start roll dice
    dice.addEventListener("click", function() {
-    console.log("clicked on dice")
+    console.log("clicked on dice");
     dice.classList.add('animate'); //start animate
     setTimeout(() => {
       dice.classList.remove('animate'); //stop animate after timeout
