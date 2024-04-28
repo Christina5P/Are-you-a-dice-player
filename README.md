@@ -65,17 +65,18 @@ My first thought was to build a 2048 - game board with number to merge into high
 ## Design
 I choosed a colourful font to get a happy feeling and border-radius so the buttons are not so "stiff"
 Background color for bigger screen is a grey background to lift the colourful text 
+<hr>
 ![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/1cfc3e1d-b391-4a6e-bec8-cc670a4e3974)
 
 
-When I tested the game on smaller screens as mobile and ipad, I saw the font won´t show the colours and it was too dark approach, so I changed the background colour and used the font Bungee instead of in max-width: 820px. 
+When I tested the game on smaller screens as mobile and ipad, I saw the font won´t show the colours and it was too dark approach, so I changed the background colour and used the font Bungee instead of in max-width: 820px. <hr>
 ![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/06191f72-1bdc-460c-8fda-37c23dcef02c)
 
 ![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/4b505aa9-ada0-4c8c-ac46-74bea8b80cf6)
 
 
 I  have some contrast alert in Wave, but it depends of the font style, since I tried a lot of different backgrounds and it´s still the same number of alerts.
-I decided to keep the font anyway, because I dont think you get distrurbed of any contrastproblem.
+I decided to keep the font anyway, because I dont think you get distrurbed of any contrastproblem.<hr>
 
 ![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/f8f5c177-7f44-40c7-83d6-3afea1209afc)
 
