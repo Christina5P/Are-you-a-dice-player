@@ -1,6 +1,7 @@
 
  let randomNumber = Math.floor(Math.random() * 6) + 1;
   
+ //roll dice when clicking on it
 function rollDice() {
   const diceContainer = document.getElementById("diceContainer");
   diceContainer.innerHTML = ""; // clear dots to new roll
@@ -9,18 +10,19 @@ function rollDice() {
         return randomNumber; 
 }     
 
+//create div and spans for dice and 6 sides of number
 let dice = document.createElement("div");
 dice.classList.add("dice");
 
    //addventlistener to start roll dice
    dice.addEventListener("click", function() {
     console.log("clicked on dice")
-    dice.classList.add('animate');
+    dice.classList.add('animate'); //start animate
     setTimeout(() => {
-      dice.classList.remove('animate');
+      dice.classList.remove('animate'); //stop animate after timeout
       playerChoices.push(randomNumber);
       checkAnswer(randomNumber);
-          }, 5000); // dice rolls in 4 seconds
+          }, 3000); // dice rolls in 3 seconds
       message.textContent = "dice rolled: ";
 });
 

@@ -74,7 +74,7 @@ footer {
     font-family: 'Courier New', Courier, monospace;
     font-size: medium;
     color: black;
-    }
+        }
 
 /* button for play*/
 .play {
@@ -143,17 +143,12 @@ button {
     position: absolute;
      }
 
+     /*animate the dice*/
 @keyframes roll {
   50% {
       transform: rotateX(455deg) rotateY(455deg);
   }
 }
-
-
-.animate {
-    animation: roll 4s;
-  }
-
   /*dots on dice*/
   .dice-dot {
     --top: 0%;
@@ -217,7 +212,7 @@ video {
     padding: 1.051%;  
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 820px) {
  
     body {
         background-color:#d7e6e1; 
@@ -243,7 +238,7 @@ video {
 }
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 821px) {
       body{
         font-size: 3.5rem;
     }

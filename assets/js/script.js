@@ -1,27 +1,26 @@
 
    const playAgainBtn = document.getElementById("play");
 
+   //reload the game by clicking playagain button
 playAgainBtn.addEventListener('click', function () {
   location.reload();
+
  //move back to top when you click "playagain" button
   document.body.scrollTop = 0;  // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera*/
 });
 
-   //Variabels
+//Variabels
 const allImages = document.querySelectorAll(".image"); // 3 value.img to pick from
 const betScore = document.getElementById("bet-score"); //to call elements for cash
 const value = ["10", "50", "100",];   
 let picknumberElement = document.getElementById("picknumber"); // picked value 
-//let playElement = document.getElementById("message");//message to click on dice
 const buttons = document.querySelectorAll(".control"); //1-6 numbersbuttons in board to pick from
-//const resetButton = document.getElementById("resetButton");
-
 const playerScore = document.getElementById("player-score"); 
 let playerChoices = []; //to start with
 let choicecounter = 0; //to start with
 
-let message = document.getElementById("message");
+//let message = document.getElementById("message");
 
 console.log("DOM is loaded");
 
@@ -65,16 +64,16 @@ console.log("DOM is loaded");
                 });
                 let maxChoices = 0;
 
-                buttons.forEach(button => {
+                                buttons.forEach(button => {
                 button.addEventListener("click", function() {
                 changeBoardColor(event, maxChoices);
             });
         });   
-            
+        
+        // change the backgroundcolor when click on number
         function changeBoardColor(event, maxChoices) {                
         if (choicecounter < maxChoices) {
-        // change the backgroundcolor when click on number
-         event.target.style.backgroundColor = "#FFFFFF"; 
+                 event.target.style.backgroundColor = "#FFFFFF"; 
          playerChoices.push(event.target.value); 
          choicecounter++; 
 
@@ -114,23 +113,18 @@ console.log("DOM is loaded");
         break;
       case "100":
         messageElement.textContent = "You won 100 euros!";
-        break;
-        default:
-          messageElement.textContent = "You won!";
+         break;
       }
       messageElement.appendChild(winnervideo);
       winnervideo.autoplay = true;
-      console.log(winnervideo.autoplay);
-  
-    }   else {
+      
+} else {
     messageElement.textContent = "You lost";
-    }
     messageElement.appendChild(loservideo);
     loservideo.autoplay = true;
-     console.log(loservideo.autoplay);
-    }
-    console.log(randomNumber)
-  }
- 
+}
+}
+console.log(randomNumber)
+ }
 
 

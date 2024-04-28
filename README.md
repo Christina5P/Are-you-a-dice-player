@@ -167,6 +167,7 @@ https://ui.dev/amiresponsive :
 ![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/e1acb5e6-a163-47ad-ae11-023d12263850)
 
 
+
 ## Acknowledgements
 
 I have some imported people around me to helped me out with PP2
@@ -259,4 +260,7 @@ Investigate video autoplay
 
 - https://www.youtube.com/watch?v=XTF5jXDr2H8
 Tutoring and help me with codes for dice animation
+
+https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_loc_reload
+-Tutor to reload the game
 
