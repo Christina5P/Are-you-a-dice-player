@@ -15,16 +15,17 @@ const buttons = document.querySelectorAll(".control"); //1-6 numbersbuttons in b
 let playerChoices = []; //to start with
 let choicecounter = 0; //to start with
 
-//let message = document.getElementById("message");
-
 console.log("DOM is loaded");
 
+
     document.querySelectorAll(".image");
+document.getElementById("betscore");
 
      // Listener click to save pick img
      allImages.forEach(image => {
         image.addEventListener("click", function() {
-           
+        betscore.remove("hidden");
+          
             // Show picked img and hide the other
             allImages.forEach(img => {
                 img.classList.add("hidden");
