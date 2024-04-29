@@ -322,10 +322,13 @@ button {
 }
 
 @media screen and (min-width: 821px) and (max-width: 1023px) {
-    
-      body{
-        font-size: 5rem;
+    body {
+        background-color: rgb(88, 80, 80);
+        font-family: 'Honk', "Raleway", sans-serif;
+        font-size: 1.5rem;
+        text-align: center;
     }
+
     h1 {
         font-size: 4em;
     }
@@ -334,9 +337,10 @@ button {
 }
   
 h2{
-font-size: rem;
+font-size:5rem;
 margin: 14px;
     }
+
     .image {
       font-size: 60rem;
     }
@@ -421,6 +425,24 @@ h1 {
     justify-content: center;
  
 }
+body {
+    background-color: rgb(88, 80, 80);
+    font-family: 'Honk', "Raleway", sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+}
+a{
+    font-size: 4rem;
+}
+
+.image-container {
+font-size: 5rem;
+}
+
+h2{
+font-size:5rem;
+margin: 14px;
+}
 
 /* instruction (list) */
 .rules {
@@ -438,6 +460,7 @@ height: 10%;
 width: 25%;
 margin: 20%;
 }
+
 /* message of win or lose*/
 #result {
 margin: 15% 30% 3% 30%;
@@ -445,4 +468,30 @@ width: auto;
 height: auto;
 display: inline-grid;
 }
+
+/* click on the dice-msg */
+#message {
+    margin: 5%;
+    font-size: 5rem;
+}
+
+.dice {
+    height: 180px;
+    width: 180px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 48%;
+    transition: transform 0.5s ease;
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+    font-family:sans-serif;
+    position: absolute;
+  }
+
+  #board {
+    width: 45%;
+  }
 }
