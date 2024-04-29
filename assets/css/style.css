@@ -240,7 +240,7 @@ video {
         background-color: rgb(81, 155, 155);
        } 
 .rules {
-    font-size: 2rem;
+    font-size: 1rem;
      font-family:Bungee Spice; 
      font-style: normal;
 }¨
@@ -250,7 +250,11 @@ video {
         height: auto;
         margin: 2%;
       }
-
+      .image {
+        width: 6rem;
+        height: auto;
+        margin: 2%;
+    }
 .play {
     width: 70%;
     height: fit-content;
@@ -267,7 +271,7 @@ video {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 40%;
+    margin: 0 45%;
     transition: transform 0.5s ease;
     color: black;
     background-color: white;
@@ -317,7 +321,7 @@ button {
 }
 }
 
-@media screen and (min-width: 821px) {
+@media screen and (min-width: 821px) and (max-width: 1023px) {
     
       body{
         font-size: 5rem;
@@ -365,6 +369,7 @@ margin: 14px;
 /* click on the dice-msg */
 #message {
     margin: 5%;
+    font-size: 5rem;
 }
 
 .dice {
@@ -374,7 +379,7 @@ margin: 14px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 40%;
+    margin: 0 48%;
     transition: transform 0.5s ease;
     color: black;
     background-color: white;
@@ -385,7 +390,7 @@ margin: 14px;
 
 /* message of win or lose*/
 #result {
-    margin: 33% 30% 3% 21%;
+    margin: 0% 30% 3% 21%;
 }
 /* playbutton*/
 
@@ -397,5 +402,47 @@ margin: 14px;
      margin: -25% 5% 1% 14%;
      display: flex;
      justify-content: center;
+}
+}
+
+
+@media screen and (min-width: 1024px){
+ 
+h1 {
+    background-color: rgb(81, 155, 155);
+    font-size: 5rem;
+   }
+
+/* playbutton*/
+.play{
+    margin: 0% 5% 1% 14%;
+    background-color:rgb(81, 155, 155);
+    display: flex;
+    justify-content: center;
+ 
+}
+
+/* instruction (list) */
+.rules {
+font-size: 5rem;
+  font-style: normal;
+}
+
+
+button {
+font-family: 'Honk', "Raleway", sans-serif;
+font-size: 5rem;
+text-align: center;
+background-color: black;
+height: 10%;
+width: 25%;
+margin: 20%;
+}
+/* message of win or lose*/
+#result {
+margin: 15% 30% 3% 30%;
+width: auto;
+height: auto;
+display: inline-grid;
 }
 }
