@@ -158,6 +158,12 @@ The site was deployed to GitHub pages. The way I manage that:
 It is resolved today!
 <hr>
 
+- Resposive problem
+  I made different css styles for different @media screens and it ended up to show differents results in 2 different browsers, even if I had saved.I could see that the pushed changes wasn´t my last onces.
+I had to replace them over again.
+It was my last work before deployment. If there would be any responsive problem left, I didn´t have time to solve it before deadline.
+
+
 ## Testing
 
 I have done a lot of manual testing:
@@ -178,10 +184,12 @@ I have checked css code through https://jigsaw.w3.org/css-validator/#validate_by
 ### JS Hint
 I have checked JS codes through https://jshint.com/
 comments to the result of testing:
-playerchoice - declaire other file
-check answer - is a function
+dicecontainer - use for handle dice and dots
+betscore - to hide text.content 
+rollDice- is a function
+
 <br>
-![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/57e0dbb5-2698-4a26-bd46-6540dd7aa42b)
+![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/17b9410e-fe0b-47de-9912-73538368f526)
 
 
 ### Lighthouse
@@ -307,7 +315,7 @@ I also went through my codes step by step to get better structure.
 I decided to use Javascript for the most of content, since this belongs to this project.
 It has been a "back and forth" project and run out of time in the end, so I have concentrated on functions without errors and understand Javascript.
 <br> 
-Since this is a quick game I started with styling for smaller devices and it has an opportunity to get nicer styles, preferably a little more styling for bigger devices.
+Since this is a quick game I started with styling for smaller devices and it has an opportunity to get nicer styles, preferably a little more styling for bigger devices, since my time ran out.
 <br>
 The commits are a bit messy and uninformative and I am practise to get a flow and clear information whats in it.
 Since I made a lot of small changes, as space between rows, font size etc. I had to commit to see the result and it got back and forth.
