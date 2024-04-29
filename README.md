@@ -87,8 +87,9 @@ When I tested the game on smaller screens as mobile and ipad, I saw the font won
 
 
 I  have some contrast alert in Wave, but it depends of the font style, since I tried a lot of different backgrounds and it´s still the same number of alerts.
-I decided to keep the font anyway, because I dont think you get distrurbed of any contrastproblem.<hr>
-
+the low contrast is because the font has a black shadow and it gets a low contrast to a darker background.
+I want to keep a dark background, since it is a high contrast between the font and background and thats works fine even I you don´t see the shadow that well.
+<hr>
 I have also create an own Head icon to use in head
 
 ![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/79e01bff-fbe7-42b2-81ec-a046889c7d51)
@@ -104,12 +105,17 @@ A counter to add your bet (/or the dice number) for every times you win and coun
 * Best score
 On right hand side tha game will represent a best score list. 
 
-## Media
+## Technologies
 
-- Website logo is picked from www.favicon.io and downloaded to my repository.
+- Balsamiq - Building the wireframes
+- HTML - Make the structur 
+- CSS - for the styling of fonts, pictures and placment
+- Javasvript - for functions of the game
 - Pictures of values is taken from /www.istockphoto.com
-- The winner and loservideo is pictures taking from www.canva.com and edit by me to an animated 4 seconds video.
+- www.canva.com The winner and loservideo is pictures taking from here and edit by me to an animated 4 seconds video.
 - https://favicon.io/ - For favicon to head
+- Gitpod - the codeplace i used
+- Github - to restore everything in a repository
 
 
 ## Deployment
@@ -149,7 +155,7 @@ The site was deployed to GitHub pages. The way I manage that:
   Pitty, I got 3 different github pages and 2 of them had error 404, since they are not current any more.
 ![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/5579bd95-2bfb-4f55-be24-c7ea9d620eff)
 <br>
-It is resolved today.
+It is resolved today!
 <hr>
 
 ## Testing
@@ -171,6 +177,9 @@ I have checked css code through https://jigsaw.w3.org/css-validator/#validate_by
 
 ### JS Hint
 I have checked JS codes through https://jshint.com/
+comments to the result of testing:
+playerchoice - declaire other file
+check answer - is a function
 <br>
 ![image](https://github.com/Christina5P/are-you-a-dice-player/assets/160019695/57e0dbb5-2698-4a26-bd46-6540dd7aa42b)
 
@@ -298,7 +307,9 @@ I also went through my codes step by step to get better structure.
 I decided to use Javascript for the most of content, since this belongs to this project.
 It has been a "back and forth" project and run out of time in the end, so I have concentrated on functions without errors and understand Javascript.
 <br> 
-Since this is a quick game I started with styling for smaller devices and it has an opportunity to get nicer styles, preferably a little more atyling for bigger devices.
-I would also look to style it, so you dont need to schroll up and down.
+Since this is a quick game I started with styling for smaller devices and it has an opportunity to get nicer styles, preferably a little more styling for bigger devices.
+<br>
+The commits are a bit messy and uninformative and I am practise to get a flow and clear information whats in it.
+Since I made a lot of small changes, as space between rows, font size etc. I had to commit to see the result and it got back and forth.
 
 
